@@ -1,0 +1,28 @@
+{
+  "name": "Tokyo Quotes",
+  "version": "0.0.1",
+  "authors": [
+    "James Pants <jamespants@gmail.com>"
+  ],
+  "description": "Quote board",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.26",
+    "angular-sanitize": "~1.2.26",
+    "angular-route": "~1.2.26",
+    "contentful": "~0.1.2",
+    "angular-scroll": "~0.6.2",
+    "showdown": "~0.3.1",
+    "angular-animate": "~1.2.26",
+    "ng-contentful": "~0.1.2",
+    "angular-youtube-mb": "~0.1.3"
+  }
+}
