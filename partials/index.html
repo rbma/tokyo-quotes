@@ -1,2 +1,6 @@
 
-<h1>yo</h1>
+<div fullscreen-video="fullscreen-video" vid="{{current.fields.youtubeId}}"></div>
+<div ng-show="videoStopped" class="info">
+  <h1>{{current.fields.titleName}}</h1>
+  <p>{{current.fields.artistText}}</p>
+</div>

@@ -1,1 +1,6 @@
-h1 yo
+div(fullscreen-video, vid="{{current.fields.youtubeId}}")
+.info(ng-show="videoStopped")
+	h1 {{current.fields.titleName}}
+	p {{current.fields.artistText}}
+
+

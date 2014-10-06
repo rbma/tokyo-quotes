@@ -1,1 +1,1 @@
-(function(){"use strict";var t;t=angular.module("quoteDirectives",[])}).call(this);
+(function(){"use strict";var e;e=angular.module("quoteDirectives",[]),e.directive("fullscreenVideo",["$rootScope","quoteService",function(e,o){var i;return i=function(e,i,n){return n.$observe("vid",function(e){return e?$.okvideo({video:e,hd:!0,loop:!1,volume:15,autoplay:!1,onFinished:function(){return o.nextVideo()}}):void 0})},{$scope:{vid:"@"},link:i}}])}).call(this);
