@@ -1,6 +1,12 @@
 
-<div fullscreen-video="fullscreen-video" vid="{{current.fields.youtubeId}}"></div>
-<div ng-show="videoStopped" class="info">
+
+
+<div ng-show="playing" class="video-wrapper">
+  <div class="video">
+    <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
+  </div>
+</div>
+<div ng-show="!playing &amp;&amp; !begin" class="info">
   <h1>{{current.fields.titleName}}</h1>
-  <p>{{current.fields.artistText}}</p>
+  <p>{{current.fields.artistText}}</p><a ng-click="nextVideo()" class="navi fa fa-arrow-right"></a>
 </div>

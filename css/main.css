@@ -1,17 +1,33 @@
 @font-face {
-  font-family: 'clan_pronarrow_ultra';
+  font-family: 'clan';
   src: url("../fonts/clanpro-narrultra-webfont.eot");
   src: url("../fonts/clanpro-narrultra-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/clanpro-narrultra-webfont.woff2") format("woff2"), url("../fonts/clanpro-narrultra-webfont.woff") format("woff"), url("../fonts/clanpro-narrultra-webfont.ttf") format("truetype"), url("../fonts/clanpro-narrultra-webfont.svg#clan_pronarrow_ultra") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'clan';
+  src: url("../fonts/clanpro-bold-webfont.eot");
+  src: url("../fonts/clanpro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/clanpro-bold-webfont.woff2") format("woff2"), url("../fonts/clanpro-bold-webfont.woff") format("woff"), url("../fonts/clanpro-bold-webfont.ttf") format("truetype"), url("../fonts/clanpro-bold-webfont.svg#clan_probold") format("svg");
   font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'clan';
+  src: url("../fonts/clanpro-news-webfont.eot");
+  src: url("../fonts/clanpro-news-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/clanpro-news-webfont.woff2") format("woff2"), url("../fonts/clanpro-news-webfont.woff") format("woff"), url("../fonts/clanpro-news-webfont.ttf") format("truetype"), url("../fonts/clanpro-news-webfont.svg#clan_pronews") format("svg");
+  font-weight: normal;
   font-style: normal; }
 *, *:before, *:after {
   box-sizing: border-box; }
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer !important; }
 
 html {
   height: 100%;
   width: 100%;
   font-family: futura, Helvetica, sans-serif;
-  font-size: 16px;
   margin: 0;
   color: white;
   -webkit-text-size-adjust: 100%;
@@ -21,18 +37,40 @@ html {
 body {
   height: 100%;
   width: 100%;
+  font-size: 16px;
+  line-height: 24px;
   background-color: black;
-  margin: 0; }
+  margin: 0;
+  background-position: top center;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -ms-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important; }
+
+ul {
+  display: block;
+  list-style-type: none;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px; }
 
 h1 {
-  font-family: 'clan_pronarrow_ultra', Helvetica, sans-serif;
-  font-weight: bold;
-  letter-spacing: -1px;
-  font-size: 4em;
+  font-family: 'clan', Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
   line-height: 1;
   -webkit-font-smoothing: antialised;
   margin: 0;
   text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.5em; } }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 4em; } }
 
 p {
   width: 60%;
@@ -40,24 +78,57 @@ p {
   font-size: 1.5em;
   line-height: 1.5; }
 
+.navi {
+  font-size: 2em; }
+
 .frame {
   position: absolute;
-  top: 29px;
+  top: 0;
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   left: 0; }
 
+.ng-show, .ng-hide {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+
+::-webkit-scrollbar {
+  display: none; }
+
 header {
+  display: block;
+  background: black;
+  color: white;
+  text-align: center;
+  height: 100%;
+  line-height: 56px;
+  padding: 0 13px;
+  width: 20%;
+  border-right: 1px solid white;
+  box-sizing: border-box;
   position: fixed;
-  background-color: black;
+  overflow: hidden;
   top: 0;
   left: 0;
-  height: 58px;
-  border-bottom: 1px solid white;
-  width: 100%;
-  z-index: 999; }
+  z-index: 999999999; }
+  header img {
+    max-width: 80%; }
+  header a {
+    color: white;
+    text-decoration: none; }
+  header ul {
+    padding: 0; }
+    header ul li {
+      font-family: 'clan';
+      font-weight: bold; }
+      header ul li:hover {
+        background-color: white;
+        color: black; }
 
 .info {
   width: 100%;
@@ -69,4 +140,39 @@ header {
   left: 0;
   text-align: center; }
   .info h1 {
-    margin-top: 5%; }
+    margin-top: 20%; }
+    @media (min-width: 768px) {
+      .info h1 {
+        margin-top: 15%; } }
+    @media (min-width: 1024px) {
+      .info h1 {
+        margin-top: 7.5%; } }
+
+.video-wrapper {
+  display: block;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  width: 80%;
+  height: 100%; }
+
+.video {
+  opacity: 1;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 50px;
+  margin-top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all .5s ease; }
+  .video iframe, .video object, .video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }

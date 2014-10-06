@@ -1,0 +1,44 @@
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+header{
+	display: block;
+	background: black;
+	color: white;
+	text-align: center;
+	height: 100%;
+	line-height: 56px;
+	padding: 0 13px;
+	width: 20%;
+	border-right: 1px solid white;
+	box-sizing: border-box;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	z-index: 999999999;
+	img{
+		max-width: 80%;
+	}
+	a{
+		color: white;
+		text-decoration: none;
+	}
+	ul{
+		padding: 0;
+
+		li{
+			font-family: 'clan';
+			font-weight: bold;
+			&:hover{
+				background-color: white;
+				color: black;
+			}
+		}
+	}
+	
+}
+
+

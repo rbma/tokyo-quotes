@@ -5,6 +5,15 @@ quoteServices = angular.module('quoteServices', [])
 quoteServices.factory('quoteService', ->
 	quotes = []
 	shuffledQuotes = []
+	order = 0
+	
+	videoPlaying = false
+
+	
+
+	
+
+
 
 	addQuotes = (quotes) ->
 		quotes = quotes
@@ -24,13 +33,10 @@ quoteServices.factory('quoteService', ->
 
 
 
-	
-
 	#exposed methods
-	return{
-		
-		getVids: ->
-			return vids
+	return{ 
+		getOrder: ->
+			return order
 		
 		shuffleQuotes: (quotes) ->
 			shuffleQuotes(quotes)
@@ -38,7 +44,7 @@ quoteServices.factory('quoteService', ->
 		addQuotes: (quotes) ->
 			addQuotes(quotes)
 
-		nextVideo: ->
-			console.log 'next'
+		infoScreen: ->
+			infoScreen()
 	}
 )

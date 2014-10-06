@@ -9,7 +9,15 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <header></header>
+    <header><img ng-src="img/logo.png">
+      <ul>
+        <li hover-pic img="hatsune.png"><span class="fa fa-play-circle"><span> Hatsune Miku</li>
+        <li hover-pic img="tomita.jpg"><span class="fa fa-play-circle"><span> Iaso Tomita</li>
+        <li hover-pic img="yosuke.jpg"><span class="fa fa-play-circle"><span> Yosi Horikawa</li>
+        <li hover-pic img="otomo.jpg"><span class="fa fa-play-circle"><span> Otomo</li>
+        <li hover-pic img="ikeda.jpeg"><span class="fa fa-play-circle"><span> Ryoji Ikeda</li>
+      </ul>
+    </header>
     <div du-scroll-container class="frame">
       <div ng-view></div>
     </div>
@@ -22,7 +30,6 @@
     <script src="bower_components/ng-contentful/ng-contentful.js"></script>
     <script src="bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script>
     <script src="bower_components/showdown/compressed/showdown.js"></script>
-    <script src="bower_components/okvideo/src/okvideo.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/directives.js"></script>

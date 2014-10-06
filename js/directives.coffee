@@ -2,33 +2,38 @@
 
 quoteDirectives = angular.module('quoteDirectives', [])
 
-quoteDirectives.directive('fullscreenVideo', [
-	'$rootScope', 
-	'quoteService', 
-	($rootScope, quoteService) ->
+quoteDirectives.directive('hoverPic', ->
 
-		link = ($scope, element, attrs) ->
-
-			attrs.$observe('vid', (value) ->
-				if (value)
-					$.okvideo({
-						video: value
-						hd: true
-						loop: false
-						volume: 15
-						autoplay: false
-						onFinished: ->
-							quoteService.nextVideo()
-					})
-				)
+	mousemove = (event) ->
+		mouseX = (event.clientX)
+		mouseY = (event.clientY) / -5
+		$('body').css
+			backgroundPosition: "#{mouseX}px #{mouseY}px"
 
 
+	link = ($scope, element, attrs) ->
 
-		return{
-			$scope:{
-				vid: '@'
-			}
-			link: link
-		}
+		element.unbind('mouseenter')
+		
+		element.bind('mouseenter', ->
+			image = attrs.img
+			$('body').css
+				background: "url(img/#{image})"
+		)
 
-])
+		element.unbind('mouseleave')
+		element.bind('mouseleave', ->
+			$('body').css
+				background: "black"
+		)
+
+		element.bind('mousemove', (event) ->
+			mousemove(event)
+			)
+
+
+
+	return{
+		link: link
+	}
+)
