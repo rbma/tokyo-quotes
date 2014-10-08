@@ -11,5 +11,9 @@
       <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
     </div>
   </div>
-  
+  <div ng-show="showInfo" class="info"><span ng-click="closeInfo()" class="fa fa-times"></span>
+    <h1>{{current.fields.titleName}}</h1>
+    <p>{{current.fields.artistText}}</p>
+    
+  </div>
 </div>

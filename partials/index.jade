@@ -35,9 +35,10 @@
 
 
 
-	//- .info(ng-show="!playing && !begin")
-	//- 	h1 {{current.fields.titleName}}
-	//- 	p {{current.fields.artistText}}
-	//- 	//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
+	.info(ng-show="showInfo")
+		span(class="fa fa-times", ng-click="closeInfo()")
+		h1 {{current.fields.titleName}}
+		p {{current.fields.artistText}}
+		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
 
 

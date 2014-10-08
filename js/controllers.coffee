@@ -21,6 +21,9 @@ quoteControllers.controller('IndexCtrl', [
 
 		#video is initially visible
 		$scope.playing = false
+
+		#show we show info?
+		$scope.showInfo = false
 		
 		
 
@@ -36,17 +39,12 @@ quoteControllers.controller('IndexCtrl', [
 		
 		$scope.$on('youtube.player.ready', ($event, player) ->
 			$scope.player = player
-			# player.playVideo()
-			
-			#only for debug. take out in prod.
-			player.seekTo(28)
-			
-			# $scope.playing = true
 		)
 
 		
 		$scope.$on('youtube.player.ended', ($event, player) ->
 			$scope.playing = false
+			$scope.showInfo = true
 			)
 
 		
@@ -84,6 +82,12 @@ quoteControllers.controller('IndexCtrl', [
 				$scope.player.loadVideoById(video)
 				#play video
 				$scope.player.playVideo()
+				#only for debug. take out in prod.
+				$scope.player.seekTo(28)
+
+
+			$scope.closeInfo = ->
+				$scope.showInfo = false
 
 
 			# $scope.nextVideo = ->
