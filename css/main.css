@@ -89,7 +89,13 @@ p {
   margin: 0;
   width: 100%;
   height: 100%;
-  left: 0; }
+  left: 0;
+  background-position: center center;
+  -webkit-background-size: 50% !important;
+  -moz-background-size: 50% !important;
+  -ms-background-size: 50% !important;
+  -o-background-size: 50% !important;
+  background-size: 50% !important; }
   .frame h1 {
     text-align: center; }
 
@@ -169,7 +175,7 @@ header {
   display: block;
   z-index: 999;
   position: fixed;
-  top: 0;
+  top: 10%;
   left: 20%;
   width: 80%;
   height: 100%; }

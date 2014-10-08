@@ -72,14 +72,18 @@ quoteControllers.controller('IndexCtrl', [
 
 
 			#shuffle array and return shuffled version
-			$scope.shuffledQuotes = quoteService.shuffleQuotes(quoteCollection)
+			# $scope.shuffledQuotes = quoteService.shuffleQuotes(quoteCollection)
 
 			#current quote
-			$scope.current = $scope.shuffledQuotes[order]
+			$scope.current = quoteCollection[0]
 
 
-			$scope.launchVid = (element, attrs) ->
-				console.log attrs
+			$scope.launchVid = (video) ->
+				$scope.playing = true
+
+				$scope.player.loadVideoById(video)
+				#play video
+				$scope.player.playVideo()
 
 
 			# $scope.nextVideo = ->

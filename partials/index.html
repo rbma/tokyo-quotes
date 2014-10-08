@@ -1,12 +1,15 @@
 
-<div style="background:url({{body.bodyImage.fields.file.url}}) no-repeat center center" class="image-wrapper"></div>
-<div ng-show="playing" class="video-wrapper">
-  <div class="video">
-    <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
+<div du-scroll-container="du-scroll-container" style="background: black" class="frame">
+  <header><img ng-src="img/logo.png"/>
+    <ul>
+      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote.fields.youtubeId)"><span class="fa fa-caret-right">{{quote.fields.titleName}}</span></li>
+    </ul>
+  </header>
+  <div style="background:url({{body.bodyImage.fields.file.url}}) no-repeat center center" class="image-wrapper"></div>
+  <div ng-show="playing" class="video-wrapper">
+    <div class="video">
+      <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
+    </div>
   </div>
-</div>
-<div ng-show="!playing &amp;&amp; !begin" class="info">
-  <h1>{{current.fields.titleName}}</h1>
-  <p>{{current.fields.artistText}}</p>
   
 </div>

@@ -6,9 +6,9 @@ quoteDirectives.directive('hoverPic', ->
 
 	
 	mousemove = (event) ->
-		mouseX = (event.clientX)
-		mouseY = (event.clientY) / -5
-		$('body').css
+		mouseX = (event.clientX) * 2
+		mouseY = (event.clientY) * 2
+		$('.frame').css
 			backgroundPosition: "#{mouseX}px #{mouseY}px"
 
 
@@ -20,15 +20,18 @@ quoteDirectives.directive('hoverPic', ->
 		
 		element.bind('mouseenter', ->
 			image = attrs.img
-			$('body').css
-				background: "url(img/#{image})"
+			$('.frame').css
+				background: "url(#{image})"
+			#hide image wrapper
+			$('.image-wrapper').hide()
 		)
 
 		
 		element.unbind('mouseleave')
 		element.bind('mouseleave', ->
-			$('body').css
+			$('.frame').css
 				background: "black"
+			$('.image-wrapper').show()
 		)
 
 		element.bind('mousemove', (event) ->

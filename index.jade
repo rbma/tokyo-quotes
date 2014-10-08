@@ -7,29 +7,18 @@ html(lang="en", ng-app="quotes", class="frame")
 		link(rel="stylesheet", type="text/css", href="css/normalize.css")
 		link(rel="stylesheet", type="text/css", href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
 		link(rel="stylesheet", type="text/css", href="css/main.css")
+		//- prefetch all images if possible
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/6Ohqt4ixjyAcCMim44Ma24/73db9e27a2c8583e0b532f4e7a933b49/calendar-1758x600px-26items-text-ja.png")
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/2w7yiG95uk8UY0OK0S0icy/5e65bfb477b0ca07ab9bc31b55698b42/tomita_lo.jpg")
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/8pS4BMQIWkEyCYeeKOyyA/d0e5028b516412cf96e4a17d3263b167/miku_lo.jpg")
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/3VKutml2w8mOWegOMcuQaC/8bc72011dafe8df80424ab71ecba961a/yamaguchi_lo.jpg")
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/bSQxl7jXNYyyyGE0w2eo0/e207dd05ee8cb3c58729e9e11b208959/otomo_lo.jpg")
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/4iuHJKIa00coIKM6Qe6G8e/72e20d269eca21337a020a00d5543180/yosi_lo.jpg")
+		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/EOWbMduDdu8Y2sWYMwMay/df9b47e7469c666c52df8b94d144d080/ikeda_lo.jpg")
 
 	body
 		
-		
-
-		header
-			img(ng-src="img/logo.png")
-			//- Work on caching images ahead of time
-			ul
-				li(ng-click="launchVid()", hover-pic, img="quote_hatsunemiku.jpg") <span class="fa fa-caret-right"><span> Hatsune Miku
-				li(ng-click="launchVid()", hover-pic, img="quote_IsaoTomita.jpg") <span class="fa fa-caret-right"><span> Iaso Tomita
-				li(ng-click="launchVid()", hover-pic, img="quote_yosi.jpg") <span class="fa fa-caret-right"><span> Yosi Horikawa
-				li(ng-click="launchVid()", hover-pic, img="quote_YoshihideOtomo.jpg") <span class="fa fa-caret-right"><span> Otomo
-				li(ng-click="launchVid()", hover-pic, img="quote_RyojiIkeda.jpg") <span class="fa fa-caret-right"><span> Ryoji Ikeda
-
-		
-
-
-
-		//- Container
-		.frame(du-scroll-container, style="background: url({{body.bodyImage.fields.file.url}})")
-			div(ng-view)
-				h1 {{body.title}}
+		div(ng-view)
 
 
 		
