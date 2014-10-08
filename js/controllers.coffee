@@ -22,6 +22,8 @@ quoteControllers.controller('IndexCtrl', [
 		#video is initially visible
 		$scope.playing = false
 		
+		
+
 		#yt parameters
 		$scope.playerVars = {
 			controls: 0
@@ -63,7 +65,7 @@ quoteControllers.controller('IndexCtrl', [
 			$scope.body = $scope.data.fields
 			
 			#total data
-			# console.log $scope.data
+			console.log $scope.body
 			
 			#get array of all quotes
 			quoteCollection = $scope.body.individualQuote
@@ -72,24 +74,27 @@ quoteControllers.controller('IndexCtrl', [
 			#shuffle array and return shuffled version
 			$scope.shuffledQuotes = quoteService.shuffleQuotes(quoteCollection)
 
-			#start background
 			#current quote
 			$scope.current = $scope.shuffledQuotes[order]
 
 
-			$scope.nextVideo = ->
-				order++
+			$scope.launchVid = (element, attrs) ->
+				console.log attrs
 
 
-				#make sure text is hidden before new video starts
-				$scope.playing = true
+			# $scope.nextVideo = ->
+			# 	order++
+
+
+			# 	#make sure text is hidden before new video starts
+			# 	$scope.playing = true
 				
-				if order >= $scope.shuffledQuotes.length
-					order = 0
+			# 	if order >= $scope.shuffledQuotes.length
+			# 		order = 0
 				
-				$scope.current = $scope.shuffledQuotes[order]
+			# 	$scope.current = $scope.shuffledQuotes[order]
 				
-				newVid = $scope.current.fields.youtubeId
+			# 	newVid = $scope.current.fields.youtubeId
 
 
 

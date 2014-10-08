@@ -822,6 +822,72 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/quote_hatsunemiku.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.78011e+06,
+		"inputAbbreviatedPath": "\/img\/quote_hatsunemiku.jpg",
+		"outputAbbreviatedPath": "\/img\/quote_hatsunemiku.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/quote_IsaoTomita.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.88738e+06,
+		"inputAbbreviatedPath": "\/img\/quote_IsaoTomita.jpg",
+		"outputAbbreviatedPath": "\/img\/quote_IsaoTomita.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/quote_RyojiIkeda.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 648700,
+		"inputAbbreviatedPath": "\/img\/quote_RyojiIkeda.jpg",
+		"outputAbbreviatedPath": "\/img\/quote_RyojiIkeda.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/quote_YamaguchiIchiro.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.7441e+06,
+		"inputAbbreviatedPath": "\/img\/quote_YamaguchiIchiro.jpg",
+		"outputAbbreviatedPath": "\/img\/quote_YamaguchiIchiro.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/quote_YoshihideOtomo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.06588e+06,
+		"inputAbbreviatedPath": "\/img\/quote_YoshihideOtomo.jpg",
+		"outputAbbreviatedPath": "\/img\/quote_YoshihideOtomo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/quote_yosi.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.84011e+06,
+		"inputAbbreviatedPath": "\/img\/quote_yosi.jpg",
+		"outputAbbreviatedPath": "\/img\/quote_yosi.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/tomita.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -843,6 +909,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/index.jade": {
 		"compileDebug": 1,
@@ -950,15 +1025,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/partials\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/partials\/index.jade": {
 		"compileDebug": 1,

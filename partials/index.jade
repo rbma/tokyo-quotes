@@ -1,6 +1,6 @@
 //- div(fullscreen-video, vid="{{current.fields.youtubeId}}")
 
-
+.image-wrapper(style="background:url({{body.bodyImage.fields.file.url}}) no-repeat center center")
 
 .video-wrapper(ng-show="playing")
 	div(class="video")
@@ -9,6 +9,6 @@
 .info(ng-show="!playing && !begin")
 	h1 {{current.fields.titleName}}
 	p {{current.fields.artistText}}
-	a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
+	//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
 
 

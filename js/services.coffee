@@ -11,10 +11,6 @@ quoteServices.factory('quoteService', ->
 
 	
 
-	
-
-
-
 	addQuotes = (quotes) ->
 		quotes = quotes
 

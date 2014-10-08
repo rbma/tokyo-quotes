@@ -10,17 +10,33 @@ html(lang="en", ng-app="quotes", class="frame")
 
 	body
 		
+		
+
 		header
 			img(ng-src="img/logo.png")
+			//- Work on caching images ahead of time
 			ul
-				li(hover-pic, img="hatsune.png") <span class="fa fa-play-circle"><span> Hatsune Miku
-				li(hover-pic, img="tomita.jpg") <span class="fa fa-play-circle"><span> Iaso Tomita
-				li(hover-pic, img="yosuke.jpg") <span class="fa fa-play-circle"><span> Yosi Horikawa
-				li(hover-pic, img="otomo.jpg") <span class="fa fa-play-circle"><span> Otomo
-				li(hover-pic, img="ikeda.jpeg") <span class="fa fa-play-circle"><span> Ryoji Ikeda
+				li(ng-click="launchVid()", hover-pic, img="quote_hatsunemiku.jpg") <span class="fa fa-caret-right"><span> Hatsune Miku
+				li(ng-click="launchVid()", hover-pic, img="quote_IsaoTomita.jpg") <span class="fa fa-caret-right"><span> Iaso Tomita
+				li(ng-click="launchVid()", hover-pic, img="quote_yosi.jpg") <span class="fa fa-caret-right"><span> Yosi Horikawa
+				li(ng-click="launchVid()", hover-pic, img="quote_YoshihideOtomo.jpg") <span class="fa fa-caret-right"><span> Otomo
+				li(ng-click="launchVid()", hover-pic, img="quote_RyojiIkeda.jpg") <span class="fa fa-caret-right"><span> Ryoji Ikeda
 
-		.frame(du-scroll-container)
+		
+
+
+
+		//- Container
+		.frame(du-scroll-container, style="background: url({{body.bodyImage.fields.file.url}})")
 			div(ng-view)
+				h1 {{body.title}}
+
+
+		
+
+
+
+
 
 
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")

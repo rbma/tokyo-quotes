@@ -93,7 +93,8 @@
             }
           },
           "artistText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nulla nibh, tempus ac consectetur ac, sollicitudin at justo. Mauris nulla neque, vehicula in velit quis, volutpat porttitor lacus. Suspendisse accumsan, ipsum a gravida interdum, justo ex feugiat sapien, volutpat lobortis nisi massa at lacus. Ut euismod et massa vel euismod. Praesent scelerisque ligula enim, eu gravida velit finibus et. Duis vitae enim mauris. Sed at sodales libero. Nunc vehicula lectus eget orci aliquam luctus. Nullam sollicitudin tellus id elementum rhoncus. Etiam tristique sodales pretium. Mauris augue orci, fermentum eget ex in, semper auctor massa. Vestibulum in scelerisque sem.",
-          "youtubeId": "159eclQz8QY"
+          "youtubeId": "159eclQz8QY",
+          "hook": "hatsune"
         }
       },
       {
@@ -129,7 +130,8 @@
             }
           },
           "artistText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nulla nibh, tempus ac consectetur ac, sollicitudin at justo. Mauris nulla neque, vehicula in velit quis, volutpat porttitor lacus. Suspendisse accumsan, ipsum a gravida interdum, justo ex feugiat sapien, volutpat lobortis nisi massa at lacus. Ut euismod et massa vel euismod. Praesent scelerisque ligula enim, eu gravida velit finibus et. Duis vitae enim mauris. Sed at sodales libero. Nunc vehicula lectus eget orci aliquam luctus. Nullam sollicitudin tellus id elementum rhoncus. Etiam tristique sodales pretium. Mauris augue orci, fermentum eget ex in, semper auctor massa. Vestibulum in scelerisque sem.",
-          "youtubeId": "aEpxhW0UhQE"
+          "youtubeId": "aEpxhW0UhQE",
+          "hook": "tomita"
         }
       }
     ],

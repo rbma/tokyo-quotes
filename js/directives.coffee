@@ -4,12 +4,15 @@ quoteDirectives = angular.module('quoteDirectives', [])
 
 quoteDirectives.directive('hoverPic', ->
 
+	
 	mousemove = (event) ->
 		mouseX = (event.clientX)
 		mouseY = (event.clientY) / -5
 		$('body').css
 			backgroundPosition: "#{mouseX}px #{mouseY}px"
 
+
+	
 
 	link = ($scope, element, attrs) ->
 
@@ -21,6 +24,7 @@ quoteDirectives.directive('hoverPic', ->
 				background: "url(img/#{image})"
 		)
 
+		
 		element.unbind('mouseleave')
 		element.bind('mouseleave', ->
 			$('body').css

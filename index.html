@@ -11,15 +11,17 @@
   <body>
     <header><img ng-src="img/logo.png">
       <ul>
-        <li hover-pic img="hatsune.png"><span class="fa fa-play-circle"><span> Hatsune Miku</li>
-        <li hover-pic img="tomita.jpg"><span class="fa fa-play-circle"><span> Iaso Tomita</li>
-        <li hover-pic img="yosuke.jpg"><span class="fa fa-play-circle"><span> Yosi Horikawa</li>
-        <li hover-pic img="otomo.jpg"><span class="fa fa-play-circle"><span> Otomo</li>
-        <li hover-pic img="ikeda.jpeg"><span class="fa fa-play-circle"><span> Ryoji Ikeda</li>
+        <li ng-click="launchVid()" hover-pic img="quote_hatsunemiku.jpg"><span class="fa fa-caret-right"><span> Hatsune Miku</li>
+        <li ng-click="launchVid()" hover-pic img="quote_IsaoTomita.jpg"><span class="fa fa-caret-right"><span> Iaso Tomita</li>
+        <li ng-click="launchVid()" hover-pic img="quote_yosi.jpg"><span class="fa fa-caret-right"><span> Yosi Horikawa</li>
+        <li ng-click="launchVid()" hover-pic img="quote_YoshihideOtomo.jpg"><span class="fa fa-caret-right"><span> Otomo</li>
+        <li ng-click="launchVid()" hover-pic img="quote_RyojiIkeda.jpg"><span class="fa fa-caret-right"><span> Ryoji Ikeda</li>
       </ul>
     </header>
-    <div du-scroll-container class="frame">
-      <div ng-view></div>
+    <div du-scroll-container style="background: url({{body.bodyImage.fields.file.url}})" class="frame">
+      <div ng-view>
+        <h1>{{body.title}}</h1>
+      </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>

@@ -1,4 +1,13 @@
-
+.image-wrapper{
+	position: absolute;
+	top: 0;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	@include vendorize(background-size, contain !important);
+}
 
 .info{
 	width: 100%;
