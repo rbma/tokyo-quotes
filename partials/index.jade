@@ -23,7 +23,8 @@
 	
 
 	.image-wrapper
-		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/2LPsVdCPGowqemG6AGCSue/f4f37b6c02f06ff802fc879114bc154d/rbma-panoram.jpg")
+		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/1ESpX9PMO8WAqOkQCEWEw6/920d905432b5d937dbfca617d2696e60/panoram2.jpg")
+		h1 {{body.body}}
 		//- img(slide, ng-src="{{body.bodyImage.fields.file.url}}")
 		//- h1(style="z-index: 9999999999999, position: absolute, top: 0") {{body.body}}
 
@@ -43,7 +44,7 @@
 	.info(class="fade", ng-show="showInfo")
 		span(class="fa fa-times", ng-click="closeInfo()")
 		h1 {{titleName}}
-		p {{artistText}}
+		div(class="info-body", ng-bind-html="trust(artistText)")
 		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
 
 
@@ -56,7 +57,7 @@
 			li(ng-repeat="quote in body.individualQuote")
 				h1 {{quote.fields.titleName}}
 				div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
-				p {{quote.fields.artistText}}
+				p(ng-bind-html="bodyHTML")
 		
 
 

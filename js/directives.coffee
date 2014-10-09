@@ -43,7 +43,13 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 			
 
 			#set height of image to window height
-			img.height = winHeight
+			img.height = winHeight * 1.2
+
+			#get diff
+			diffheight = img.height - winHeight
+			offsetheight = diffheight / 2
+
+
 
 			img.width = winHeight * ratio
 			img.style.opacity = 0.8
@@ -69,10 +75,11 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 
 		mousemove = (event) ->
 			mouseX = -(event.clientX)
-			mouseY = (event.clientY)
+			mouseY = -(event.clientY) * 0.1
 			console.log mouseX
 			element.css
 				left: "#{mouseX}px"
+				top: "#{mouseY}px"
 
 
 		reset()

@@ -5,9 +5,12 @@ quoteControllers = angular.module('quoteControllers', [])
 quoteControllers.controller('IndexCtrl', [
 	'$scope'
 	'$http'
+	'$sce'
 	'contentfulClient'
 	'quoteService'
-	($scope, $http, contentfulClient, quoteService) ->
+	($scope, $http, $sce, contentfulClient, quoteService) ->
+
+		converter = new Showdown.converter()
 
 		$scope.body = {}
 		$scope.videoStopped = false
@@ -62,6 +65,10 @@ quoteControllers.controller('IndexCtrl', [
 			
 			#total data
 			console.log $scope.body
+
+			#loop through each quote and render markdown
+			for quote in $scope.body.individualQuote
+				quote.fields.artistText = converter.makeHtml(quote.fields.artistText)
 			
 			#get array of all quotes
 			quoteCollection = $scope.body.individualQuote
@@ -86,10 +93,9 @@ quoteControllers.controller('IndexCtrl', [
 				$scope.titleName = quote.fields.titleName
 				$scope.artistText = quote.fields.artistText
 
-				# $scope.updateInfo(quote)
 				
 				#only for debug. take out in prod.
-				# $scope.player.seekTo(28)
+				$scope.player.seekTo(28)
 
 
 			$scope.closeInfo = ->
@@ -99,21 +105,8 @@ quoteControllers.controller('IndexCtrl', [
 				$scope.current = quote
 
 
-			# $scope.nextVideo = ->
-			# 	order++
-
-
-			# 	#make sure text is hidden before new video starts
-			# 	$scope.playing = true
-				
-			# 	if order >= $scope.shuffledQuotes.length
-			# 		order = 0
-				
-			# 	$scope.current = $scope.shuffledQuotes[order]
-				
-			# 	newVid = $scope.current.fields.youtubeId
-
-
+			$scope.trust = (text) ->
+				return $sce.trustAsHtml(text)
 
 
 

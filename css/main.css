@@ -139,7 +139,7 @@ header {
   left: 0;
   z-index: 999999999; }
   header img {
-    max-width: 80%;
+    max-width: 50%;
     margin-bottom: 0; }
   header span.fa {
     padding-right: 5px; }
@@ -180,13 +180,19 @@ header {
     .image-wrapper {
       display: none !important; } }
   .image-wrapper h1 {
-    width: 80%;
-    margin-left: 10%;
+    right: 20px;
+    top: 20px;
     line-height: 1.5;
-    margin-top: 15%;
+    width: 40%;
+    -webkit-font-smoothing: antialiased;
+    text-transform: none;
+    font-size: 1.2em;
     color: white;
     position: absolute;
-    top: 0;
+    font-family: 'mb', 'clan', helvetica, sans-serif;
+    background-color: white !important;
+    color: black;
+    padding: 5px 10px;
     z-index: 9999999999999; }
   .image-wrapper .panoram {
     height: 100%;
@@ -195,7 +201,8 @@ header {
 
 .info {
   width: 80%;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   z-index: 99;
   background-color: black;
   position: absolute;
@@ -228,12 +235,12 @@ header {
     @media (min-width: 1024px) {
       .info h1 {
         margin-top: 7.5%; } }
-  .info p {
-    max-width: 80%;
-    margin-left: 10%;
-    margin-bottom: 10%;
-    text-align: left;
-    padding: 0; }
+  .info .info-body p {
+    width: 90%;
+    margin: 10px 5%;
+    text-align: left; }
+    .info .info-body p:last-child {
+      margin-bottom: 50px; }
   @media (max-width: 767px) {
     .info {
       display: none; } }
@@ -267,28 +274,6 @@ header {
   transition: all .5s ease;
   background-color: black; }
   .video iframe, .video object, .video embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-
-.live-stream {
-  opacity: 1;
-  position: relative;
-  box-sizing: border-box;
-  padding-bottom: 96.25%;
-  padding-top: 0;
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 0;
-  margin-top: -12.5%;
-  margin-left: -50%;
-  width: 180%;
-  z-index: 1;
-  transition: all .5s ease;
-  background-color: black; }
-  .live-stream iframe, .live-stream object, .live-stream embed {
     position: absolute;
     top: 0;
     left: 0;

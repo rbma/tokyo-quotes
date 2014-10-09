@@ -13,14 +13,20 @@
 		display: none !important;
 	}
 	h1{
-		width: 80%;
-		margin-left: 10%;
+		right: 20px;
+		top: 20px;
 		line-height: 1.5;
-		margin-top: 15%;
+		width: 40%;
+		-webkit-font-smoothing: antialiased;
+		text-transform: none;
+		font-size: 1.2em;
 		// background-color: black;
 		color: white;
 		position: absolute;
-		top: 0;
+		font-family: 'mb', 'clan', helvetica, sans-serif;
+		background-color: white !important;
+		color: black;
+		padding: 5px 10px;
 		z-index: 9999999999999;
 	}
 	.panoram{
@@ -32,7 +38,8 @@
 
 .info{
 	width: 80%;
-	height: 100%;
+	min-height: 100%;
+	height: auto;
 	z-index: 99;
 	background-color: black;
 	position: absolute;
@@ -65,13 +72,17 @@
 			margin-top: 7.5%;
 		}
 	}
-	p{
-		max-width: 80%;
-		margin-left: 10%;
-		margin-bottom: 10%;
-		text-align: left;
-		padding: 0;
+	.info-body{
+		p{
+			width: 90%;
+			margin: 10px 5%;
+			text-align: left;
+			&:last-child{
+				margin-bottom: 50px;
+			}
+		}
 	}
+
 	@media (max-width: 767px){
 		display: none;
 	}
