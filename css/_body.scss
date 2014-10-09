@@ -1,0 +1,89 @@
+.image-wrapper{
+	position: absolute;
+	top: 0;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-position: center center;
+	@include vendorize(background-size, cover !important);
+	@media (max-width: 767px){
+		display: none !important;
+	}
+	h1{
+		right: 20px;
+		top: 20px;
+		line-height: 1.5;
+		width: 40%;
+		-webkit-font-smoothing: antialiased;
+		text-transform: none;
+		font-size: 1.2em;
+		// background-color: black;
+		color: white;
+		position: absolute;
+		font-family: 'mb', 'clan', helvetica, sans-serif;
+		background-color: white !important;
+		color: black;
+		padding: 5px 10px;
+		z-index: 9999999999999;
+	}
+	.panoram{
+		height: 100%;
+		width: auto;
+		position: absolute;
+	}
+}
+
+.info{
+	width: 80%;
+	min-height: 100%;
+	height: auto;
+	z-index: 99;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 20%;
+	.fa-times{
+		position: fixed;
+		top: 40px;
+		right: 40px;
+		font-size: 40px;
+		width: 46px;
+		height: 46px;
+		padding: 3px;
+		text-align: center;
+		overflow: hidden;
+		@include vendorize(transition, all .2s linear);
+		&:hover{
+			background-color: white;
+			color: black;
+		}
+	}
+
+	h1{
+		margin-top: 20%;
+		text-align: center;
+		@media (min-width: 768px){
+			margin-top: 15%;
+		}
+		@media (min-width: 1024px){
+			margin-top: 7.5%;
+		}
+	}
+	.info-body{
+		p{
+			width: 90%;
+			margin: 10px 5%;
+			text-align: left;
+			&:last-child{
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	@media (max-width: 767px){
+		display: none;
+	}
+}

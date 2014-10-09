@@ -1,0 +1,65 @@
+//- Container
+
+.frame(du-scroll-container, style="background: black")
+
+	header
+		img(class="logo", ng-src="img/logo.png")
+		//- Work on caching images ahead of time
+		ul
+			li(ng-repeat="quote in body.individualQuote", 
+				hover-pic, 
+				img="{{quote.fields.artistImage.fields.file.url}}",
+				ng-click="launchVid(quote)",
+				id="{{quote.sys.id}}")
+				span(class="fa fa-caret-right")
+				span(class="name") {{quote.fields.titleName}}
+
+				
+
+
+
+				
+
+	
+
+	.image-wrapper
+		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/1ESpX9PMO8WAqOkQCEWEw6/920d905432b5d937dbfca617d2696e60/panoram2.jpg")
+		h1 {{body.body}}
+		//- img(slide, ng-src="{{body.bodyImage.fields.file.url}}")
+		//- h1(style="z-index: 9999999999999, position: absolute, top: 0") {{body.body}}
+
+	
+
+
+
+
+	.video-wrapper(class="fade", ng-show="playing")
+		div(class="video")
+			youtube-video(id="main-vid", video-id="current.fields.youtubeId", player-vars="playerVars")
+
+	
+
+
+
+	.info(class="fade", ng-show="showInfo")
+		span(class="fa fa-times", ng-click="closeInfo()")
+		h1 {{titleName}}
+		div(class="info-body", ng-bind-html="trust(artistText)")
+		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
+
+
+	.mobile
+		img(class="logo", ng-src="img/logo.png")
+		img(class="mobile-title-image", ng-src="{{body.bodyImage.fields.file.url}}")
+		h2 {{body.body}}
+
+		ul
+			li(ng-repeat="quote in body.individualQuote")
+				h1 {{quote.fields.titleName}}
+				div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
+				p(ng-bind-html="bodyHTML")
+		
+
+
+
+
