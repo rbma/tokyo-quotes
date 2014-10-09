@@ -4,9 +4,15 @@
 	left: 20%;
 	width: 80%;
 	height: 100%;
+	z-index: 1;
 	background-repeat: no-repeat;
 	background-position: center center;
-	@include vendorize(background-size, contain !important);
+	@include vendorize(background-size, cover !important);
+	@media (max-width: 767px){
+		width: 100%;
+		left: 0;
+		background-size: cover !important;
+	}
 }
 
 .info{

@@ -2,18 +2,18 @@
 <div du-scroll-container="du-scroll-container" style="background: black" class="frame">
   <header><img ng-src="img/logo.png"/>
     <ul>
-      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote.fields.youtubeId, quote)" id="{{quote.sys.id}}"><span class="fa fa-caret-right"></span><span class="name">{{quote.fields.titleName}}</span></li>
+      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote)" id="{{quote.sys.id}}"><span class="fa fa-caret-right"></span><span class="name">{{quote.fields.titleName}}</span></li>
     </ul>
   </header>
   <div style="background:url({{body.bodyImage.fields.file.url}}) no-repeat center center" class="image-wrapper"></div>
-  <div ng-show="playing" class="video-wrapper">
+  <div ng-show="playing" class="video-wrapper fade">
     <div class="video">
       <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
     </div>
   </div>
-  <div ng-show="showInfo" class="info"><span ng-click="closeInfo()" class="fa fa-times"></span>
-    <h1>{{current.fields.titleName}}</h1>
-    <p>{{current.fields.artistText}}</p>
+  <div ng-show="showInfo" class="info fade"><span ng-click="closeInfo()" class="fa fa-times"></span>
+    <h1>{{titleName}}</h1>
+    <p>{{artistText}}</p>
     
   </div>
 </div>

@@ -4,6 +4,7 @@ app = angular.module('quotes', [
 	'ngRoute'
 	'ngSanitize'
 	'ng-contentful'
+	'ngAnimate'
 	'quoteControllers'
 	'quoteDirectives'
 	'quoteServices'

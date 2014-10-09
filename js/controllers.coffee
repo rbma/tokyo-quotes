@@ -9,8 +9,7 @@ quoteControllers.controller('IndexCtrl', [
 	'quoteService'
 	($scope, $http, contentfulClient, quoteService) ->
 
-		$scope.body = ''
-		$scope.quotes = []
+		$scope.body = {}
 		$scope.videoStopped = false
 		$scope.begin = true
 		
@@ -57,7 +56,6 @@ quoteControllers.controller('IndexCtrl', [
 		
 		contentfulClient.entries({'content_type': '3NIaEMnF5CcQOCUeUaGESy', 'include': 1}).then (data) ->
 			
-
 			$scope.data =  data[0]
 			
 			$scope.body = $scope.data.fields
@@ -69,21 +67,24 @@ quoteControllers.controller('IndexCtrl', [
 			quoteCollection = $scope.body.individualQuote
 
 
-			#shuffle array and return shuffled version
-			# $scope.shuffledQuotes = quoteService.shuffleQuotes(quoteCollection)
-
 			#current quote
 			$scope.current = quoteCollection[0]
 
 
-			$scope.launchVid = (video, quote) ->
+			$scope.launchVid = (quote) ->
 				$scope.playing = true
 
+				video = quote.fields.youtubeId
+
+
+
 				$scope.player.loadVideoById(video)
+				
 				#play video
 				$scope.player.playVideo()
 
-				
+				$scope.titleName = quote.fields.titleName
+				$scope.artistText = quote.fields.artistText
 
 				# $scope.updateInfo(quote)
 				

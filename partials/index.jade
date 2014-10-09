@@ -9,7 +9,7 @@
 			li(ng-repeat="quote in body.individualQuote", 
 				hover-pic, 
 				img="{{quote.fields.artistImage.fields.file.url}}",
-				ng-click="launchVid(quote.fields.youtubeId, quote)",
+				ng-click="launchVid(quote)",
 				id="{{quote.sys.id}}")
 				span(class="fa fa-caret-right")
 				span(class="name") {{quote.fields.titleName}}
@@ -29,7 +29,7 @@
 
 
 
-	.video-wrapper(ng-show="playing")
+	.video-wrapper(class="fade", ng-show="playing")
 		div(class="video")
 			youtube-video(id="main-vid", video-id="current.fields.youtubeId", player-vars="playerVars")
 
@@ -37,10 +37,10 @@
 
 
 
-	.info(ng-show="showInfo")
+	.info(class="fade", ng-show="showInfo")
 		span(class="fa fa-times", ng-click="closeInfo()")
-		h1 {{current.fields.titleName}}
-		p {{current.fields.artistText}}
+		h1 {{titleName}}
+		p {{artistText}}
 		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
 
 
