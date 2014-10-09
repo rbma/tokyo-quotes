@@ -8,6 +8,9 @@
 	height: 100%;
 	padding-top: 3.5%;
 	background-color: black !important;
+	@media (max-width: 767px){
+		display: none;
+	}
 }
 
 
@@ -33,4 +36,33 @@
 		height: 100%;
 
 	}
+}
+
+.live-stream{
+	opacity: 1;
+	position: relative;
+	box-sizing: border-box;
+	padding-bottom: 96.25%;
+	padding-top: 0;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 0;
+	margin-top: -12.5%;
+	margin-left: -50%;
+	width: 180%;
+	z-index: 1;
+	transition: all .5s ease;
+	background-color: black;
+	iframe, object, embed{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+	}
+}
+
+.lazyYT-title{
+	display: none !important;
 }

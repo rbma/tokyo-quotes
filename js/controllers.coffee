@@ -89,7 +89,7 @@ quoteControllers.controller('IndexCtrl', [
 				# $scope.updateInfo(quote)
 				
 				#only for debug. take out in prod.
-				$scope.player.seekTo(28)
+				# $scope.player.seekTo(28)
 
 
 			$scope.closeInfo = ->
