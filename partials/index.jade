@@ -11,10 +11,23 @@
 				img="{{quote.fields.artistImage.fields.file.url}}",
 				ng-click="launchVid(quote)",
 				id="{{quote.sys.id}}")
-				span(class="fa fa-caret-right")
+				//- span(class="fa fa-caret-right")
 				span(class="name") {{quote.fields.titleName}}
+		
+		.link-box
+			a(href="http://www.redbullmusicacademy.jp/jp/events/", class="header-link") Event Calendar
+		.link-box
+			a(href="http://www.redbullmusicacademy.jp/jp/home", class="header-link") REDBULLMUSICACADEMY.JP に進む
 
+		.button-group
 				
+			.button
+				a(class="fa fa-twitter", href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+
+					
+			.button
+				a(class="fa fa-facebook", href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+
 
 
 
@@ -41,11 +54,18 @@
 
 
 
+	
+
 	.info(class="fade", ng-show="showInfo")
 		span(class="fa fa-times", ng-click="closeInfo()")
 		h1 {{titleName}}
 		div(class="info-body", ng-bind-html="trust(artistText)")
 		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
+
+
+	
+
+
 
 
 	.mobile
@@ -57,8 +77,19 @@
 			li(ng-repeat="quote in body.individualQuote")
 				h1 {{quote.fields.titleName}}
 				div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
-				p(ng-bind-html="bodyHTML")
+				div(ng-bind-html="trust(quote.fields.artistText)")
+
 		
+		.button-group
+				
+			.button
+				a(class="fa fa-twitter", href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+
+					
+			.button
+				a(class="fa fa-facebook", href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+						
+			
 
 
 

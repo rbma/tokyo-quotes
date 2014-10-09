@@ -2,8 +2,15 @@
 <div du-scroll-container="du-scroll-container" style="background: black" class="frame">
   <header><img ng-src="img/logo.png" class="logo"/>
     <ul>
-      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote)" id="{{quote.sys.id}}"><span class="fa fa-caret-right"></span><span class="name">{{quote.fields.titleName}}</span></li>
+      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote)" id="{{quote.sys.id}}"><span class="name">{{quote.fields.titleName}}</span>
+      </li>
     </ul>
+    <div class="link-box"><a href="http://www.redbullmusicacademy.jp/jp/events/" class="header-link">Event Calendar</a></div>
+    <div class="link-box"><a href="http://www.redbullmusicacademy.jp/jp/home" class="header-link">REDBULLMUSICACADEMY.JP に進む</a></div>
+    <div class="button-group">
+      <div class="button"><a href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&amp;via=rbma&amp;text=Share Text Here" target="blank" class="fa fa-twitter"></a></div>
+      <div class="button"><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp" target="blank" class="fa fa-facebook"></a></div>
+    </div>
   </header>
   <div class="image-wrapper">
     <div slide="slide" image="https://images.contentful.com/4xlwm16911zp/1ESpX9PMO8WAqOkQCEWEw6/920d905432b5d937dbfca617d2696e60/panoram2.jpg" class="panoram"></div>
@@ -25,8 +32,12 @@
       <li ng-repeat="quote in body.individualQuote">
         <h1>{{quote.fields.titleName}}</h1>
         <div lazy="lazy" videoid="{{quote.fields.youtubeId}}" data-parameters="controls=0&amp;modestbranding=1" data-ratio="4:3" class="lazyYT">loading...</div>
-        <p ng-bind-html="bodyHTML"></p>
+        <div ng-bind-html="trust(quote.fields.artistText)"></div>
       </li>
     </ul>
+    <div class="button-group">
+      <div class="button"><a href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&amp;via=rbma&amp;text=Share Text Here" target="blank" class="fa fa-twitter"></a></div>
+      <div class="button"><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp" target="blank" class="fa fa-facebook"></a></div>
+    </div>
   </div>
 </div>
