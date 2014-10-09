@@ -2,7 +2,7 @@
 <div du-scroll-container="du-scroll-container" style="background: black" class="frame">
   <header><img ng-src="img/logo.png"/>
     <ul>
-      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote.fields.youtubeId)"><span class="fa fa-caret-right">{{quote.fields.titleName}}</span></li>
+      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote.fields.youtubeId, quote)" id="{{quote.sys.id}}"><span class="fa fa-caret-right"></span><span class="name">{{quote.fields.titleName}}</span></li>
     </ul>
   </header>
   <div style="background:url({{body.bodyImage.fields.file.url}}) no-repeat center center" class="image-wrapper"></div>

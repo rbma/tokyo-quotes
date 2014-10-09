@@ -76,18 +76,26 @@ quoteControllers.controller('IndexCtrl', [
 			$scope.current = quoteCollection[0]
 
 
-			$scope.launchVid = (video) ->
+			$scope.launchVid = (video, quote) ->
 				$scope.playing = true
 
 				$scope.player.loadVideoById(video)
 				#play video
 				$scope.player.playVideo()
+
+				
+
+				# $scope.updateInfo(quote)
+				
 				#only for debug. take out in prod.
 				$scope.player.seekTo(28)
 
 
 			$scope.closeInfo = ->
 				$scope.showInfo = false
+
+			$scope.updateInfo = (quote) ->
+				$scope.current = quote
 
 
 			# $scope.nextVideo = ->

@@ -9,8 +9,10 @@
 			li(ng-repeat="quote in body.individualQuote", 
 				hover-pic, 
 				img="{{quote.fields.artistImage.fields.file.url}}",
-				ng-click="launchVid(quote.fields.youtubeId)")
-				span(class="fa fa-caret-right") {{quote.fields.titleName}}
+				ng-click="launchVid(quote.fields.youtubeId, quote)",
+				id="{{quote.sys.id}}")
+				span(class="fa fa-caret-right")
+				span(class="name") {{quote.fields.titleName}}
 
 				
 
