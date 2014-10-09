@@ -52,7 +52,7 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 
 
 			img.width = winHeight * ratio
-			img.style.opacity = 0.8
+			# img.style.opacity = 0.8
 
 			wrapperWidth = $('.image-wrapper').width()
 

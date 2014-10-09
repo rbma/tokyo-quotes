@@ -17,16 +17,18 @@
 		.link-box
 			a(href="http://www.redbullmusicacademy.jp/jp/events/", class="header-link") Event Calendar
 		.link-box
-			a(href="http://www.redbullmusicacademy.jp/jp/home", class="header-link") REDBULLMUSICACADEMY.JP に進む
+			a(href="http://www.redbullmusicacademy.jp/jp/home", class="header-link") REDBULLMUSICACADEMY.JP
 
 		.button-group
 				
 			.button
-				a(class="fa fa-twitter", href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+				a(href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+					span(class="fa fa-twitter")
 
 					
 			.button
-				a(class="fa fa-facebook", href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+				a(href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+					span(class="fa fa-facebook")
 
 
 
@@ -38,9 +40,6 @@
 	.image-wrapper
 		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/1ESpX9PMO8WAqOkQCEWEw6/920d905432b5d937dbfca617d2696e60/panoram2.jpg")
 		h1 {{body.body}}
-		//- img(slide, ng-src="{{body.bodyImage.fields.file.url}}")
-		//- h1(style="z-index: 9999999999999, position: absolute, top: 0") {{body.body}}
-
 	
 
 
@@ -69,27 +68,29 @@
 
 
 	.mobile
-		img(class="logo", ng-src="img/logo.png")
-		img(class="mobile-title-image", ng-src="{{body.bodyImage.fields.file.url}}")
-		h2 {{body.body}}
-
-		ul
-			li(ng-repeat="quote in body.individualQuote")
-				h1 {{quote.fields.titleName}}
-				div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
-				div(ng-bind-html="trust(quote.fields.artistText)")
-
+		.mobile-title
+			img(class="logo", ng-src="img/logo.png")
 		
-		.button-group
-				
-			.button
-				a(class="fa fa-twitter", href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+		.mobile-body
+			h2 {{body.body}}
 
-					
-			.button
-				a(class="fa fa-facebook", href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
-						
+			ul
+				li(ng-repeat="quote in body.individualQuote")
+					h1 {{quote.fields.titleName}}
+					div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
+					div(ng-bind-html="trust(quote.fields.artistText)")
+
 			
+			.button-group
+					
+				.button
+					a(class="fa fa-twitter", href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+
+						
+				.button
+					a(class="fa fa-facebook", href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+							
+				
 
 
 

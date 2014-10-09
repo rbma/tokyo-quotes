@@ -42,7 +42,7 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: futura, Helvetica, sans-serif;
+  font-family: 'clan', futura, Helvetica, sans-serif;
   margin: 0;
   color: white;
   -webkit-text-size-adjust: 100%;
@@ -73,7 +73,7 @@ ul {
   -webkit-padding-start: 20px; }
 
 h1 {
-  font-family: 'mb', 'clan', Helvetica, sans-serif;
+  font-family: 'clan', Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.5em;
   line-height: 1;
@@ -131,7 +131,6 @@ header {
   line-height: 56px;
   padding: 0 13px;
   width: 20%;
-  border-right: 1px solid white;
   box-sizing: border-box;
   position: fixed;
   overflow: hidden;
@@ -140,7 +139,8 @@ header {
   z-index: 999999999; }
   header img {
     max-width: 40%;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 10px; }
   header span.fa {
     padding-right: 5px; }
   header span.name {
@@ -196,49 +196,40 @@ header {
     box-sizing: border-box;
     margin-left: 0;
     width: 100%; }
-    @media screen and (max-width: 1080px), screen and (max-device-width: 1080px) {
-      header .button-group {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        width: 50%; } }
     header .button-group .button {
-      -webkit-font-smoothing: antialiased;
       background-color: white;
       border-radius: 0;
       color: black;
       margin: 0;
-      margin-right: 5px;
       width: 35px;
       height: 35px;
-      padding: 0;
-      display: inline-block;
       line-height: 35px;
-      box-shadow: 1px 0px 0px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d, 6px 7px 0px #333333, 8px 7px 0px #4d4d4d, 7px 8px 0px #333333, 9px 8px 0px #4d4d4d, 8px 9px 0px #333333;
+      display: inline-block;
+      text-align: center;
+      box-shadow: 1px 0px 1px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d, 6px 7px 0px #333333, 8px 7px 0px #4d4d4d, 7px 8px 0px #333333, 9px 8px 0px #4d4d4d;
       -webkit-transition: all 0.1s linear;
       -moz-transition: all 0.1s linear;
       -ms-transition: all 0.1s linear;
       -o-transition: all 0.1s linear;
       transition: all 0.1s linear; }
       header .button-group .button:active, header .button-group .button:hover {
-        -webkit-transform: translate(5px, 5px);
-        -moz-transform: translate(5px, 5px);
-        -ms-transform: translate(5px, 5px);
-        -o-transform: translate(5px, 5px);
-        transform: translate(5px, 5px);
+        -webkit-transform: translate(3px, 3px);
+        -moz-transform: translate(3px, 3px);
+        -ms-transform: translate(3px, 3px);
+        -o-transform: translate(3px, 3px);
+        transform: translate(3px, 3px);
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         -ms-box-shadow: none;
         -o-box-shadow: none;
         box-shadow: none; }
-      header .button-group .button a {
-        text-decoration: none;
+      header .button-group .button span {
         color: black;
-        font-weight: bold;
-        line-height: 35px;
-        padding: 0;
+        font-size: 1.5rem;
+        line-height: 1;
         vertical-align: middle;
-        font-size: 20px; }
+        margin-left: auto;
+        margin-right: auto; }
 
 .image-wrapper {
   position: absolute;
@@ -268,7 +259,7 @@ header {
     font-size: 1.2em;
     color: white;
     position: absolute;
-    font-family: 'mb', 'clan', helvetica, sans-serif;
+    font-family: 'clan', helvetica, sans-serif;
     background-color: white !important;
     color: black;
     padding: 5px 10px;
@@ -367,7 +358,10 @@ header {
 
 .mobile {
   display: none;
-  position: absolute; }
+  position: relative;
+  margin: 0;
+  height: 100%;
+  width: 100%; }
   @media (max-width: 767px) {
     .mobile {
       display: block;
@@ -375,72 +369,75 @@ header {
       top: 0;
       left: 0;
       width: 100%;
-      height: auto; } }
-  .mobile img.logo {
-    text-align: center;
-    margin: 0 auto;
-    margin-left: 35%;
-    width: 30%; }
-  .mobile img.mobile-title-image {
-    width: 80%;
-    height: auto;
-    margin-left: 10%; }
-  .mobile h1 {
-    font-size: 3em;
-    margin-top: 20%; }
-  .mobile h2 {
-    padding: 5%;
-    text-align: center; }
-  .mobile ul li {
-    margin-bottom: 150px; }
-    .mobile ul li p {
-      padding: 0 5%;
-      font-size: 1em;
-      line-height: 1.5; }
-  .mobile .button-group {
-    box-sizing: border-box;
-    margin-left: 70%;
-    width: 30%;
-    margin-bottom: 30%; }
-    @media screen and (max-width: 1080px), screen and (max-device-width: 1080px) {
-      .mobile .button-group {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        width: 50%; } }
-    .mobile .button-group .button {
-      -webkit-font-smoothing: antialiased;
-      background-color: white;
-      border-radius: 0;
-      color: black;
-      margin: 0;
-      margin-right: 5px;
-      width: 35px;
-      height: 35px;
-      padding: 0;
-      display: inline-block;
-      line-height: 35px;
-      box-shadow: 1px 0px 0px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d, 6px 7px 0px #333333, 8px 7px 0px #4d4d4d, 7px 8px 0px #333333, 9px 8px 0px #4d4d4d, 8px 9px 0px #333333;
-      -webkit-transition: all 0.1s linear;
-      -moz-transition: all 0.1s linear;
-      -ms-transition: all 0.1s linear;
-      -o-transition: all 0.1s linear;
-      transition: all 0.1s linear; }
-      .mobile .button-group .button:active {
-        -webkit-transform: translate(5px, 5px);
-        -moz-transform: translate(5px, 5px);
-        -ms-transform: translate(5px, 5px);
-        -o-transform: translate(5px, 5px);
-        transform: translate(5px, 5px);
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -ms-box-shadow: none;
-        -o-box-shadow: none;
-        box-shadow: none; }
-      .mobile .button-group .button a {
-        text-decoration: none;
+      height: 100%; } }
+  .mobile .mobile-title {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: url("https://images.contentful.com/4xlwm16911zp/684VNJ9bOMMQKaAGiIAsEm/6f38aa722ed7a98cc7971fc3914d6686/shibuya2.jpg") no-repeat center center;
+    background-size: cover; }
+    .mobile .mobile-title img.logo {
+      text-align: right;
+      margin: 0 80%;
+      width: 15%; }
+  .mobile .mobile-body {
+    position: absolute;
+    top: 0;
+    margin-top: 150%; }
+    .mobile .mobile-body h2 {
+      padding: 5%;
+      text-align: center; }
+    .mobile .mobile-body ul li {
+      margin-bottom: 150px; }
+      .mobile .mobile-body ul li p {
+        padding: 0 5%;
+        font-size: 1em;
+        line-height: 1.5; }
+    .mobile .mobile-body .button-group {
+      box-sizing: border-box;
+      margin-left: 70%;
+      width: 30%;
+      margin-bottom: 30%; }
+      @media screen and (max-width: 1080px), screen and (max-device-width: 1080px) {
+        .mobile .mobile-body .button-group {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          width: 50%; } }
+      .mobile .mobile-body .button-group .button {
+        -webkit-font-smoothing: antialiased;
+        background-color: white;
+        border-radius: 0;
         color: black;
-        line-height: 35px;
+        margin: 0;
+        margin-right: 5px;
+        width: 35px;
+        height: 35px;
         padding: 0;
-        vertical-align: middle;
-        font-size: 20px; }
+        display: inline-block;
+        line-height: 35px;
+        box-shadow: 1px 0px 1px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d, 6px 7px 0px #333333, 8px 7px 0px #4d4d4d, 7px 8px 0px #333333, 9px 8px 0px #4d4d4d;
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+        -o-transition: all 0.1s linear;
+        transition: all 0.1s linear; }
+        .mobile .mobile-body .button-group .button:active {
+          -webkit-transform: translate(5px, 5px);
+          -moz-transform: translate(5px, 5px);
+          -ms-transform: translate(5px, 5px);
+          -o-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          -ms-box-shadow: none;
+          -o-box-shadow: none;
+          box-shadow: none; }
+        .mobile .mobile-body .button-group .button a {
+          text-decoration: none;
+          color: black;
+          line-height: 35px;
+          padding: 0;
+          vertical-align: middle;
+          font-size: 20px; }
