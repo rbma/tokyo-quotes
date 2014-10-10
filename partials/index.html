@@ -17,7 +17,7 @@
     <div class="panoram"><img ng-src="https://images.contentful.com/4xlwm16911zp/583bwx3932MsGKYcMqiyQK/8b4be82613c8c6a6843b5d8093c53662/panorama-web.jpg" slide="slide"/></div>
     <h1>{{body.body}}</h1>
   </div>
-  <div ng-show="playing" class="video-wrapper fade">
+  <div class="video-wrapper hidden">
     <div class="video">
       <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
     </div>

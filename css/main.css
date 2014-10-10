@@ -120,13 +120,8 @@ p {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
 
-.ng-hide {
-  /* this is just another form of hiding an element */
-  display: block !important;
-  opacity: 0 !important; }
-
-.ng-show {
-  opacity: 1 !important; }
+.hidden {
+  visibility: hidden !important; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -280,6 +275,8 @@ header {
     -ms-transition: all 0.2 linear;
     -o-transition: all 0.2 linear;
     transition: all 0.2 linear; }
+    .image-wrapper .panoram img {
+      display: none; }
 
 .info {
   width: 80%;

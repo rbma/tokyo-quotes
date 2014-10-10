@@ -23,6 +23,7 @@ quoteDirectives.directive('slide', ['$window', '$rootScope', ($window, $rootScop
 	link = ($scope, element, attrs) ->
 		element.bind('load', (event) ->
 			$rootScope.$broadcast('loaded')
+			element.show()
 			imgWidth = element.width()
 			imgHeight = element.height()
 

@@ -2,72 +2,77 @@
     "use strict";
     var e;
     e = angular.module("quoteControllers", []);
-    e.controller("IndexCtrl", [ "$scope", "$http", "$sce", "contentfulClient", function(e, t, n, o) {
-        var r, l;
-        r = new Showdown.converter();
+    e.controller("IndexCtrl", [ "$scope", "$window", "$http", "$sce", "contentfulClient", function(e, n, t, r, o) {
+        var a, i, u, l;
+        a = new Showdown.converter();
         e.body = {};
         e.videoStopped = false;
         e.begin = true;
         e.player = {};
         e.background = {};
-        l = 0;
+        u = 0;
         e.playing = false;
         e.showInfo = false;
+        l = function() {
+            return $(".video-wrapper").removeClass("hidden");
+        };
+        i = function() {
+            return $(".video-wrapper").addClass("hidden");
+        };
         e.playerVars = {
             controls: 0,
             autoplay: 0,
             modestbranding: 1,
             showinfo: 0,
-            hd: 1
+            hd: 1,
+            enablejsapi: 1,
+            origin: "*"
         };
-        e.$on("youtube.player.ready", function(t, n) {
-            e.player = n;
-            return console.log(e.player);
+        e.$on("youtube.player.ready", function(n, t) {
+            return e.player = t;
         });
-        e.$on("youtube.player.ended", function(t, n) {
+        e.$on("youtube.player.ended", function(n, t) {
             e.playing = false;
-            return e.showInfo = true;
+            e.showInfo = true;
+            return i();
         });
         e.$watch("playing", function(e) {
             return console.log(e);
         });
+        e.$watch("player", function(e) {});
         return o.entries({
             content_type: "3NIaEMnF5CcQOCUeUaGESy",
             include: 1
-        }).then(function(t) {
-            var o, l, a, u, i;
-            e.data = t[0];
+        }).then(function(n) {
+            var t, o, i, u, d;
+            e.data = n[0];
             e.body = e.data.fields;
-            console.log(e.body);
             e.background = e.body.bodyImage.fields.file.url;
-            e.$watch("background", function(e) {
-                return console.log(e);
-            });
-            i = e.body.individualQuote;
-            for (a = 0, u = i.length; a < u; a++) {
-                o = i[a];
-                o.fields.artistText = r.makeHtml(o.fields.artistText);
+            e.$watch("background", function(e) {});
+            d = e.body.individualQuote;
+            for (i = 0, u = d.length; i < u; i++) {
+                t = d[i];
+                t.fields.artistText = a.makeHtml(t.fields.artistText);
             }
-            l = e.body.individualQuote;
-            e.current = l[0];
-            e.launchVid = function(t) {
-                var n;
+            o = e.body.individualQuote;
+            e.current = o[0];
+            e.launchVid = function(n) {
+                var t;
                 e.playing = true;
-                n = t.fields.youtubeId;
-                e.player.loadVideoById(n);
-                e.player.playVideo();
-                e.titleName = t.fields.titleName;
-                e.artistText = t.fields.artistText;
-                return e.player.seekTo(28);
+                l();
+                t = n.fields.youtubeId;
+                e.player.loadVideoById(t);
+                e.titleName = n.fields.titleName;
+                return e.artistText = n.fields.artistText;
             };
             e.closeInfo = function() {
                 return e.showInfo = false;
             };
-            e.updateInfo = function(t) {
-                return e.current = t;
+            e.updateInfo = function(n) {
+                return e.current = n;
             };
             return e.trust = function(e) {
-                return n.trustAsHtml(e);
+                return r.trustAsHtml(e);
             };
         });
     } ]);

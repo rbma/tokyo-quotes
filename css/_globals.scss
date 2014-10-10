@@ -87,12 +87,6 @@ p{
 	@include vendorize(transition, all .3s linear);
 }
 
-.ng-hide {
-/* this is just another form of hiding an element */
-	display:block!important;
-	opacity: 0 !important;
-}
-
-.ng-show{
-	opacity: 1 !important;
+.hidden{
+	visibility: hidden !important;
 }

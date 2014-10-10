@@ -20,6 +20,7 @@
             return i.bind("load", function(r) {
                 var t, o, u, c;
                 e.$broadcast("loaded");
+                i.show();
                 o = i.width();
                 t = i.height();
                 u = o / t;

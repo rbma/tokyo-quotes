@@ -4,10 +4,11 @@ quoteControllers = angular.module('quoteControllers', [])
 
 quoteControllers.controller('IndexCtrl', [
 	'$scope'
+	'$window'
 	'$http'
 	'$sce'
 	'contentfulClient'
-	($scope, $http, $sce, contentfulClient) ->
+	($scope, $window, $http, $sce, contentfulClient) ->
 
 		converter = new Showdown.converter()
 
@@ -27,7 +28,11 @@ quoteControllers.controller('IndexCtrl', [
 		#show we show info?
 		$scope.showInfo = false
 		
-		
+		showVideo = ->
+			$(".video-wrapper").removeClass "hidden"
+
+		hideVideo = ->
+			$(".video-wrapper").addClass "hidden"
 
 		#yt parameters
 		$scope.playerVars = {
@@ -36,24 +41,29 @@ quoteControllers.controller('IndexCtrl', [
 			modestbranding: 1
 			showinfo: 0
 			hd: 1
+			enablejsapi: 1
+			origin: '*'
 		}
 
 		
 		$scope.$on('youtube.player.ready', ($event, player) ->
 			$scope.player = player
-			console.log $scope.player
 		)
 
 		
 		$scope.$on('youtube.player.ended', ($event, player) ->
 			$scope.playing = false
 			$scope.showInfo = true
+			hideVideo()
 			)
 
 		
 		#watch for changes on playing so we can trigger ng-hide/ng-show
 		$scope.$watch('playing', (value) ->
 			console.log value
+			)
+
+		$scope.$watch('player', (value) ->
 			)
 
 		
@@ -66,13 +76,10 @@ quoteControllers.controller('IndexCtrl', [
 			
 			$scope.body = $scope.data.fields
 			
-			#total data
-			console.log $scope.body
 
 			$scope.background = $scope.body.bodyImage.fields.file.url
 
 			$scope.$watch('background', (value) ->
-				console.log value
 			)
 
 
@@ -91,22 +98,22 @@ quoteControllers.controller('IndexCtrl', [
 			$scope.launchVid = (quote) ->
 				$scope.playing = true
 
+				showVideo()
 
 				video = quote.fields.youtubeId
 
 
-
+				
 				$scope.player.loadVideoById(video)
 				
 				#play video
-				$scope.player.playVideo()
+				# $scope.player.playVideo()
 
 				$scope.titleName = quote.fields.titleName
 				$scope.artistText = quote.fields.artistText
 
 				
-				#only for debug. take out in prod.
-				$scope.player.seekTo(28)
+				
 
 
 			$scope.closeInfo = ->
