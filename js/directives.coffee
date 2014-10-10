@@ -21,85 +21,62 @@ quoteDirectives.directive('lazy', ->
 quoteDirectives.directive('slide', ['$window', ($window) ->
 	
 	link = ($scope, element, attrs) ->
-		imageSrc = attrs.image
-		
-		img = new Image()
-		img.src = imageSrc
-		
-		#get original specs
-		imgWidth = img.width
-		imgHeight = img.height
+		element.bind('load', (event) ->
+			imgWidth = element.width()
+			imgHeight = element.height()
 
-		ratio = imgWidth / imgHeight
+			ratio = imgWidth / imgHeight
 
-		margin = $window.innerWidth * .2
-		
+			reset = ->
+				winHeight = $window.innerHeight
+				winWidth = $window.innerWidth
 
+				if winHeight < 700
+					winHeight = 700
 
-		reset = ->
-			winHeight = $window.innerHeight
-			winWidth = $window.innerWidth
+				element.height(winHeight)
 
-			if winHeight < 700
-				winHeight = 700
+				wrapperWidth = $('.image-wrapper').width()
 
-			img = new Image()
-			img.src = imageSrc
+				#get diff
+				diff = element.width() - wrapperWidth
+				offset = diff / 2
 
-			
-
-			#set height of image to window height
-			img.height = winHeight
+				margin = winWidth * .2
 
 
 
-			img.width = winHeight * ratio
-			# img.style.opacity = 0.8
+				$('.panoram').css
+					width: (element.width()) + 'px'
+					height: (element.height()) + 'px'
+					left: -offset * 1.5 + 'px'
 
-			wrapperWidth = $('.image-wrapper').width()
-
-			#get diff
-			diff = img.width - wrapperWidth
-			offset = diff / 2
-
-			margin = winWidth * .2
+				element.bind('mousemove', (event) ->
+					mousemove(event)
+				)
 
 
-			$('.panoram').css
-				background: "url(#{img.src}) no-repeat center center"
-				backgroundSize: "cover"
-				width: (img.width * 1.1) + 'px'
-				height: (winHeight * 1.1) + 'px'
-				left: -offset * 1.5 + 'px'
-
-			# $('.panoram').empty().append img
+				mousemove = (event) ->
+					mouseX = -(event.clientX) * 1.5
+					mouseY = -(event.clientY) * 0.05
+					$('.panoram').css
+						left: "#{mouseX}px"
+						top: "#{mouseY}px"
 
 
-		element.bind('mousemove', (event) ->
-			mousemove(event)
+			$(window).bind('resize', (event) ->
+				reset()
 			)
 
+			$window.blur ->
+				reset()
 
-		mousemove = (event) ->
-			mouseX = -(event.clientX) * 1.5
-			mouseY = -(event.clientY) * 0.1
-			element.css
-				left: "#{mouseX}px"
-				top: "#{mouseY}px"
+			$window.focus ->
+				reset()
 
 
-		reset()
-		
-		$(window).bind('resize', (event) ->
 			reset()
 			)
-
-		$window.blur ->
-			reset()
-
-		$window.focus ->
-			reset()
-
 		
 
 
