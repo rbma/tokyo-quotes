@@ -12,7 +12,7 @@
 				ng-click="launchVid(quote)",
 				id="{{quote.sys.id}}")
 				//- span(class="fa fa-caret-right")
-				span(class="name") {{quote.fields.titleName}}
+				span(class="name", ng-bind-html="trust(quote.fields.titleName)")
 		
 		.link-box
 			a(href="http://www.redbullmusicacademy.jp/jp/events/", class="header-link") Event Calendar
@@ -38,7 +38,7 @@
 	
 
 	.image-wrapper
-		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/1ESpX9PMO8WAqOkQCEWEw6/920d905432b5d937dbfca617d2696e60/panoram2.jpg")
+		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/2BUXHQlW3uOO8o2OKGy64i/bb3a7cfed95bc1e0d63e584298e18b71/panorama-web.jpg")
 		h1 {{body.body}}
 	
 
@@ -68,15 +68,16 @@
 
 
 	.mobile
+		img(class="logo", src="img/logo.png")
 		.mobile-title
-			img(class="logo", ng-src="img/logo.png")
+			
 		
 		.mobile-body
 			h2 {{body.body}}
 
 			ul
 				li(ng-repeat="quote in body.individualQuote")
-					h1 {{quote.fields.titleName}}
+					h1(ng-bind-html="trust(quote.fields.titleName)")
 					div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
 					div(ng-bind-html="trust(quote.fields.artistText)")
 

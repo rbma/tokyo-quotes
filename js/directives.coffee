@@ -31,11 +31,14 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 		imgHeight = img.height
 
 		ratio = imgWidth / imgHeight
+
+		margin = $window.innerWidth * .2
 		
 
 
 		reset = ->
 			winHeight = $window.innerHeight
+			winWidth = $window.innerWidth
 
 			img = new Image()
 			img.src = imageSrc
@@ -43,11 +46,11 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 			
 
 			#set height of image to window height
-			img.height = winHeight * 1.2
+			img.height = winHeight
 
 			#get diff
-			diffheight = img.height - winHeight
-			offsetheight = diffheight / 2
+			# diffheight = img.height - winHeight
+			# offsetheight = diffheight / 2
 
 
 
@@ -59,6 +62,8 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 			#get diff
 			diff = img.width - wrapperWidth
 			offset = diff / 2
+
+			margin = winWidth * .2
 
 			$('.panoram').css
 				width: img.width + 'px'
@@ -74,23 +79,25 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 
 
 		mousemove = (event) ->
-			mouseX = -(event.clientX)
+			mouseX = -(event.clientX) * 1.5
 			mouseY = -(event.clientY) * 0.1
-			console.log mouseX
 			element.css
 				left: "#{mouseX}px"
 				top: "#{mouseY}px"
 
 
 		reset()
+		
 		$(window).resize ->
 			reset()
 
+		$window.blur ->
+			reset()
+
+		$window.focus ->
+			reset()
+
 		
-
-		# $(window).resize ->
-		# 	console.log 'yo'
-
 
 
 	return{

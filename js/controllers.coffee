@@ -17,6 +17,7 @@ quoteControllers.controller('IndexCtrl', [
 		$scope.begin = true
 		
 		$scope.player = {}
+		$scope.background = {}
 
 
 		order = 0
@@ -55,6 +56,9 @@ quoteControllers.controller('IndexCtrl', [
 			console.log value
 			)
 
+		$scope.$watch('background', (value) ->
+			)
+
 
 		
 		contentfulClient.entries({'content_type': '3NIaEMnF5CcQOCUeUaGESy', 'include': 1}).then (data) ->
@@ -65,6 +69,8 @@ quoteControllers.controller('IndexCtrl', [
 			
 			#total data
 			console.log $scope.body
+
+			$scope.background = $scope.body.bodyImage.fields.file.url
 
 			#loop through each quote and render markdown
 			for quote in $scope.body.individualQuote

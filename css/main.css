@@ -103,6 +103,7 @@ p {
   width: 100%;
   height: 100%;
   left: 0;
+  -webkit-overflow-scrolling: touch;
   background-position: center center;
   -webkit-background-size: 50% !important;
   -moz-background-size: 50% !important;
@@ -181,15 +182,7 @@ header {
     header a.header-link:hover {
       background-color: white;
       color: black; }
-    @media (max-width: 1100px) {
-      header a.header-link {
-        font-size: 10px; } }
-    @media (max-width: 960px) {
-      header a.header-link {
-        font-size: 7px;
-        height: 40px;
-        line-height: 40px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     header {
       display: none; } }
   header .button-group {
@@ -246,7 +239,7 @@ header {
   -ms-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important; }
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     .image-wrapper {
       display: none !important; } }
   .image-wrapper h1 {
@@ -314,7 +307,7 @@ header {
     .info .info-body p a {
       text-decoration: underline;
       color: white; }
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     .info {
       display: none; } }
 
@@ -328,7 +321,7 @@ header {
   height: 100%;
   padding-top: 3.5%;
   background-color: black !important; }
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     .video-wrapper {
       display: none; } }
 
@@ -353,16 +346,34 @@ header {
     width: 100%;
     height: 100%; }
 
+.lazyYT {
+  margin-left: 5%; }
+
 .lazyYT-title {
   display: none !important; }
+
+.lazyYT-button {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 60px !important;
+  height: 41px !important;
+  z-index: 100 !important;
+  position: absolute !important;
+  top: 50% !important;
+  margin-top: -22px !important;
+  left: 50% !important;
+  margin-left: -30px !important;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAApCAYAAABp50paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABV9JREFUeNrcWk1IK1cUvrmZGBOjJvr6xKe+Slvroi6kK6GrUkSxO12IC6GgUFBcuOlC8GdRulERV3VRQV0IKhRU0NJupK3tpi1dCRaxffWHGjWZPJNnNJlMz9FzX+ZNkzylcxP1wMdMZiYz97vnu+ee+2Njmc0GyANwgANQDCgAuABOwGOAG6AAiuh+MV3Lo+fc9KyN3qGYvnEBSAA0QBTwAnBp+P0ccAxQ6bkw/T4HRABn9B+8F6f/ZiRktjJANaCSUE0kkVApoBDgAeQTIeM7dAKjAuiG6+b7wniKstgMv+2m5xMGslgZIUAAEAOcAv4GHAL+BDwDBNMRxvOPAZ8C3iUPOVNUiGaCfgOV3MZe9z5OlSDAUzxzQZXyC+BLwM+pCtMJGCTvCTJxOlpBxGpLVzF2ajqiMvyAzwDfGuXyPuALkmyY5KGZ5GVGri1duXRyVIyOPsA7gO9R/iIYtQLKiSy7Q6T+b2UkSN7vAT4U7QGDz9Mbtp/7SPySjh9gj8EpApeyh2/YoyicuhlvhuBkVU3n2jA/cBkJxyUVjBuipz2HEf0qYcKs5w1ify6DbFVVVbSrq0s9ODhQlpaWClRVdUtWUyqLE0cPEn5CXkhI8HC8ubk5ODw8XJBIJOJNTU2H/f39j/f29jxZDJI2Iowq9nJiLk1KZWWYqcKHOC9pa2t7c21tLdTR0XHgdDo1kng22rdGQaucU2YlraY1TRPJACrIXldXVzU/P+8YHR09rqysVIkwz1JWxjmNZqQRBimbBxdIvLyvr8+7uroabGxs9NP1bAS0fOmE09Q2SsxdX19fsbCw4BgcHNzzeDxhGrDItCJO2s52hiVIO3w+X+nIyEgxRPCjmpqaE8lp7VU/nCeTMASrTO++GrTDM8UQzStB4uHOzs5niqIkJLRrLIeTG2QkpVZtthu9Fgk6amtrn8zMzLgmJyePvV7vmcVl0kUuncfuhumkiIqenh7f4uJiAJKWMwuDmS4krdyxURKOYz0Qvd0NDQ1Ri9+tKIbh050Zx+q6fjg1NaWtr6/7SO5WvTuq0ABZuNyWY7L6ycnJ0dDQ0OXc3FxFJBKxW0w4opCEcmnYrDh4Vd3c3FS7u7t929vbj6ipWT3IuOREOFeeRQ/GQqGQf2xsLNDS0vIIyBbRdU2Cgl5K2pYD+SKpF1tbW0cDAwOu5eXlKkleNdqVpMMyk3eQaioJ6zCo8M/OzsZh6Fi0v79fYsi+ZNpzJByU6WHD4AEJ4QxpfHd392hiYuJyenq64vz8XGGvrlJIHSbix46lavc60xISVjc2NsK9vb0ukHKZYeIhG00I7WpeOirxQ3xnZwc99w90MaHx8fFAa2trMZAtYcl542wYOhbXoU7xox8BvmLJFTxLCRcWFkbb29tVv9+vrKyseOnj2SL6MqUEHAA+QcJ1gDl2PTcdldCexeKXCEq5GIrizOzvgC5OUTrI/rtua1ncYsl1nlzm7CjpCKcTld3vtaQbZVlY+SJoBR4wUeHIPUyykDBOwP8mZgTYw1pQQy755N2fsGlxurgO+JUmAxyGh/V7VgHmMjspNn0D+IEZZhOwDf/FrheOn7Lkdgexkm43vfB18rF8JuQGvYCD4DSUH69/B/gccJSqgG+z630euJb6Fv3JaSCfjpBm6McTFqWKNvbqPg6eIefXSbYXVAbc8PIH4EfA1+x620NGj2Cf7KMOG7cm4fi0hK5XUw0KiG1MeHQTHBZGVrFjJ0znuEXpjIItdnX7FHRPCeLeITPt4LmtBEWNiz1XYj7MxZJbmPIJpSy5pUlUXDrPxAzKiBBJN53vk9fE/q0okY4ZVBS7jaL+FWAA/y++OTUmOgsAAAAASUVORK5CYII=") !important; }
 
 .mobile {
   display: none;
   position: relative;
   margin: 0;
   height: 100%;
-  width: 100%; }
-  @media (max-width: 767px) {
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px; }
+  @media (max-width: 1024px) {
     .mobile {
       display: block;
       position: relative;
@@ -372,28 +383,56 @@ header {
       height: 100%; } }
   .mobile .mobile-title {
     position: absolute;
-    height: 100%;
+    height: 80%;
     width: 100%;
     overflow: hidden;
-    background: url("https://images.contentful.com/4xlwm16911zp/684VNJ9bOMMQKaAGiIAsEm/6f38aa722ed7a98cc7971fc3914d6686/shibuya2.jpg") no-repeat center center;
+    background: url("../img/panorama-crop.jpg") no-repeat center center;
     background-size: cover; }
-    .mobile .mobile-title img.logo {
-      text-align: right;
-      margin: 0 80%;
-      width: 15%; }
+  .mobile .logo {
+    position: absolute;
+    background-color: black;
+    right: 0;
+    top: 0;
+    padding: 2.5%;
+    width: 20%;
+    z-index: 9999999; }
   .mobile .mobile-body {
     position: absolute;
     top: 0;
-    margin-top: 150%; }
+    background-color: black;
+    color: white;
+    opacity: 1;
+    top: 80%;
+    width: 100%; }
     .mobile .mobile-body h2 {
-      padding: 5%;
+      padding: 0 5%;
       text-align: center; }
-    .mobile .mobile-body ul li {
-      margin-bottom: 150px; }
-      .mobile .mobile-body ul li p {
-        padding: 0 5%;
-        font-size: 1em;
-        line-height: 1.5; }
+    .mobile .mobile-body ul {
+      text-align: center;
+      padding: 0; }
+      .mobile .mobile-body ul li {
+        margin-bottom: 150px; }
+        .mobile .mobile-body ul li h1 {
+          font-size: 4em;
+          margin: 0;
+          padding: 0; }
+          @media (max-width: 568px) {
+            .mobile .mobile-body ul li h1 {
+              font-size: 2em; } }
+        .mobile .mobile-body ul li p {
+          padding: 0 5%;
+          font-size: 1.5em;
+          line-height: 1.7;
+          -webkit-font-smoothing: antialiased; }
+          .mobile .mobile-body ul li p a {
+            text-decoration: underline;
+            color: white; }
+          @media (max-width: 568px) {
+            .mobile .mobile-body ul li p {
+              font-size: 0.9em;
+              line-height: 1.5; } }
+        .mobile .mobile-body ul li:first-child {
+          margin-top: 80px; }
     .mobile .mobile-body .button-group {
       box-sizing: border-box;
       margin-left: 70%;

@@ -17,7 +17,7 @@
 
         if (typeof width === 'undefined' || typeof height === 'undefined') {
           height = 0;
-          width = '100%';
+          width = '90%';
           aspectRatio = (ratio.split(":")[1] / ratio.split(":")[0]) * 100;
           paddingTop = aspectRatio + '%';
         }

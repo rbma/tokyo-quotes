@@ -74,6 +74,7 @@ p{
 	width: 100%;
 	height: 100%;
 	left: 0;
+	-webkit-overflow-scrolling: touch;
 	background-position: center center;
 	// background-repeat: no-repeat !important;
 	@include vendorize(background-size, 50% !important);

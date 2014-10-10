@@ -9,7 +9,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	@include vendorize(background-size, cover !important);
-	@media (max-width: 767px){
+	@media (max-width: 1024px){
 		display: none !important;
 	}
 	h1{
@@ -87,7 +87,7 @@
 		}
 	}
 
-	@media (max-width: 767px){
+	@media (max-width: 1024px){
 		display: none;
 	}
 }

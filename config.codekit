@@ -799,39 +799,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/img\/hatsune.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.76745e+06,
-		"inputAbbreviatedPath": "\/img\/hatsune.png",
-		"outputAbbreviatedPath": "\/img\/hatsune.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/ichiro.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 46871,
-		"inputAbbreviatedPath": "\/img\/ichiro.jpg",
-		"outputAbbreviatedPath": "\/img\/ichiro.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/ikeda.jpeg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 488791,
-		"inputAbbreviatedPath": "\/img\/ikeda.jpeg",
-		"outputAbbreviatedPath": "\/img\/ikeda.jpeg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -843,112 +810,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/otomo.jpg": {
+	"\/img\/panorama-web.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 296897,
-		"inputAbbreviatedPath": "\/img\/otomo.jpg",
-		"outputAbbreviatedPath": "\/img\/otomo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/panoram2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.20423e+06,
-		"inputAbbreviatedPath": "\/img\/panoram2.jpg",
-		"outputAbbreviatedPath": "\/img\/panoram2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/quote_hatsunemiku.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.78011e+06,
-		"inputAbbreviatedPath": "\/img\/quote_hatsunemiku.jpg",
-		"outputAbbreviatedPath": "\/img\/quote_hatsunemiku.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/quote_IsaoTomita.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.88738e+06,
-		"inputAbbreviatedPath": "\/img\/quote_IsaoTomita.jpg",
-		"outputAbbreviatedPath": "\/img\/quote_IsaoTomita.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/quote_RyojiIkeda.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 648700,
-		"inputAbbreviatedPath": "\/img\/quote_RyojiIkeda.jpg",
-		"outputAbbreviatedPath": "\/img\/quote_RyojiIkeda.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/quote_YamaguchiIchiro.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.7441e+06,
-		"inputAbbreviatedPath": "\/img\/quote_YamaguchiIchiro.jpg",
-		"outputAbbreviatedPath": "\/img\/quote_YamaguchiIchiro.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/quote_YoshihideOtomo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2.06588e+06,
-		"inputAbbreviatedPath": "\/img\/quote_YoshihideOtomo.jpg",
-		"outputAbbreviatedPath": "\/img\/quote_YoshihideOtomo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/quote_yosi.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3.84011e+06,
-		"inputAbbreviatedPath": "\/img\/quote_yosi.jpg",
-		"outputAbbreviatedPath": "\/img\/quote_yosi.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/tomita.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 127355,
-		"inputAbbreviatedPath": "\/img\/tomita.jpg",
-		"outputAbbreviatedPath": "\/img\/tomita.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/yosuke.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 50623,
-		"inputAbbreviatedPath": "\/img\/yosuke.jpg",
-		"outputAbbreviatedPath": "\/img\/yosuke.jpg",
+		"initialSize": 920159,
+		"inputAbbreviatedPath": "\/img\/panorama-web.jpg",
+		"outputAbbreviatedPath": "\/img\/panorama-web.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1051,6 +919,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/lazy-yt.js",
 		"outputAbbreviatedPath": "\/js\/min\/lazy-yt-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/lazy-yt-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/lazy-yt-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/lazy-yt-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
