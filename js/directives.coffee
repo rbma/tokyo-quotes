@@ -59,21 +59,14 @@ quoteDirectives.directive('slide', ['$window', '$rootScope', ($window, $rootScop
 
 				mousemove = (event) ->
 					mouseX = -(event.clientX) * 1.5
-					mouseY = -(event.clientY) * 0.05
 					$('.panoram').css
 						left: "#{mouseX}px"
-						top: "#{mouseY}px"
 
 
 			$(window).bind('resize', (event) ->
 				reset()
 			)
 
-			$window.blur ->
-				reset()
-
-			$window.focus ->
-				reset()
 
 
 			reset()

@@ -18,48 +18,40 @@
         var r;
         r = function(r, i, t) {
             return i.bind("load", function(r) {
-                var t, u, o, c;
+                var t, o, u, c;
                 e.$broadcast("loaded");
-                u = i.width();
+                o = i.width();
                 t = i.height();
-                o = u / t;
+                u = o / t;
                 c = function() {
-                    var e, r, t, u, o, c, a;
-                    o = n.innerHeight;
+                    var e, r, t, o, u, c, a;
+                    u = n.innerHeight;
                     c = n.innerWidth;
-                    if (o < 700) {
-                        o = 700;
+                    if (u < 700) {
+                        u = 700;
                     }
-                    i.height(o);
+                    i.height(u);
                     a = $(".image-wrapper").width();
                     e = i.width() - a;
-                    u = e / 2;
+                    o = e / 2;
                     r = c * .2;
                     $(".panoram").css({
                         width: i.width() + "px",
                         height: i.height() + "px",
-                        left: -u * 1.5 + "px"
+                        left: -o * 1.5 + "px"
                     });
                     i.bind("mousemove", function(n) {
                         return t(n);
                     });
                     return t = function(n) {
-                        var e, r;
+                        var e;
                         e = -n.clientX * 1.5;
-                        r = -n.clientY * .05;
                         return $(".panoram").css({
-                            left: "" + e + "px",
-                            top: "" + r + "px"
+                            left: "" + e + "px"
                         });
                     };
                 };
                 $(window).bind("resize", function(n) {
-                    return c();
-                });
-                n.blur(function() {
-                    return c();
-                });
-                n.focus(function() {
                     return c();
                 });
                 return c();
@@ -73,13 +65,13 @@
         var e, r;
         r = document.getElementById("spinner");
         e = function(n, e, i) {
-            var t, u;
+            var t, o;
             t = {
                 lines: 13,
                 color: "#fff"
             };
-            u = new Spinner(t);
-            return u.spin(r);
+            o = new Spinner(t);
+            return o.spin(r);
         };
         n.$on("loaded", function(n) {
             return r.remove();
