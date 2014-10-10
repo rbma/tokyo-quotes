@@ -7,8 +7,7 @@ quoteControllers.controller('IndexCtrl', [
 	'$http'
 	'$sce'
 	'contentfulClient'
-	'quoteService'
-	($scope, $http, $sce, contentfulClient, quoteService) ->
+	($scope, $http, $sce, contentfulClient) ->
 
 		converter = new Showdown.converter()
 
@@ -56,8 +55,7 @@ quoteControllers.controller('IndexCtrl', [
 			console.log value
 			)
 
-		$scope.$watch('background', (value) ->
-			)
+		
 
 
 		
@@ -71,6 +69,11 @@ quoteControllers.controller('IndexCtrl', [
 			console.log $scope.body
 
 			$scope.background = $scope.body.bodyImage.fields.file.url
+
+			$scope.$watch('background', (value) ->
+				console.log value
+			)
+
 
 			#loop through each quote and render markdown
 			for quote in $scope.body.individualQuote

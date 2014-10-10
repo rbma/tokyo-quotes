@@ -40,6 +40,9 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 			winHeight = $window.innerHeight
 			winWidth = $window.innerWidth
 
+			if winHeight < 700
+				winHeight = 700
+
 			img = new Image()
 			img.src = imageSrc
 
@@ -47,10 +50,6 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 
 			#set height of image to window height
 			img.height = winHeight
-
-			#get diff
-			# diffheight = img.height - winHeight
-			# offsetheight = diffheight / 2
 
 
 
@@ -65,12 +64,15 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 
 			margin = winWidth * .2
 
-			$('.panoram').css
-				width: img.width + 'px'
-				height: winHeight + 'px'
-				left: -offset
 
-			$('.panoram').empty().append img
+			$('.panoram').css
+				background: "url(#{img.src}) no-repeat center center"
+				backgroundSize: "cover"
+				width: (img.width * 1.1) + 'px'
+				height: (winHeight * 1.1) + 'px'
+				left: -offset * 1.5 + 'px'
+
+			# $('.panoram').empty().append img
 
 
 		element.bind('mousemove', (event) ->
@@ -88,8 +90,9 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 
 		reset()
 		
-		$(window).resize ->
+		$(window).bind('resize', (event) ->
 			reset()
+			)
 
 		$window.blur ->
 			reset()

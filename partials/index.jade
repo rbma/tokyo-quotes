@@ -38,7 +38,7 @@
 	
 
 	.image-wrapper
-		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/2BUXHQlW3uOO8o2OKGy64i/bb3a7cfed95bc1e0d63e584298e18b71/panorama-web.jpg")
+		div(class="panoram", slide, image="/panorama-web.jpg")
 		h1 {{body.body}}
 	
 
@@ -57,9 +57,8 @@
 
 	.info(class="fade", ng-show="showInfo")
 		span(class="fa fa-times", ng-click="closeInfo()")
-		h1 {{titleName}}
+		h1(ng-bind-html="trust(titleName)")
 		div(class="info-body", ng-bind-html="trust(artistText)")
-		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
 
 
 	

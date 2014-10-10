@@ -13,7 +13,7 @@
     </div>
   </header>
   <div class="image-wrapper">
-    <div slide="slide" image="https://images.contentful.com/4xlwm16911zp/2BUXHQlW3uOO8o2OKGy64i/bb3a7cfed95bc1e0d63e584298e18b71/panorama-web.jpg" class="panoram"></div>
+    <div slide="slide" image="/panorama-web.jpg" class="panoram"></div>
     <h1>{{body.body}}</h1>
   </div>
   <div ng-show="playing" class="video-wrapper fade">
@@ -22,9 +22,8 @@
     </div>
   </div>
   <div ng-show="showInfo" class="info fade"><span ng-click="closeInfo()" class="fa fa-times"></span>
-    <h1>{{titleName}}</h1>
+    <h1 ng-bind-html="trust(titleName)"></h1>
     <div ng-bind-html="trust(artistText)" class="info-body"></div>
-    
   </div>
   <div class="mobile"><img src="img/logo.png" class="logo"/>
     <div class="mobile-title"></div>

@@ -8,8 +8,6 @@ app = angular.module('quotes', [
 	'quoteControllers'
 	'quoteDirectives'
 	'quoteServices'
-	'duScroll'
-	'youtube-embed'
 ])
 
 app.config(['$routeProvider', '$locationProvider', 'contentfulClientProvider', ($routeProvider, $locationProvider, contentfulClientProvider) ->

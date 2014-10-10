@@ -153,13 +153,14 @@ header {
     padding: 0;
     margin-top: 0;
     text-align: left;
-    width: 90%;
-    margin-left: 5%; }
+    width: 100%;
+    margin-left: 0; }
     header ul li {
       font-family: 'clan';
       font-weight: bold;
       margin-bottom: 10px;
-      line-height: 40px; }
+      line-height: 40px;
+      padding-left: 5%; }
       header ul li:hover {
         background-color: white;
         color: black; }
@@ -178,7 +179,7 @@ header {
     vertical-align: middle;
     text-align: center;
     border: 1px solid white;
-    margin: 10px auto; }
+    margin: 10px 5%; }
     header a.header-link:hover {
       background-color: white;
       color: black; }
@@ -260,7 +261,17 @@ header {
   .image-wrapper .panoram {
     height: 100%;
     width: auto;
-    position: absolute; }
+    position: absolute;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -ms-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    -webkit-transition: all 0.2 linear;
+    -moz-transition: all 0.2 linear;
+    -ms-transition: all 0.2 linear;
+    -o-transition: all 0.2 linear;
+    transition: all 0.2 linear; }
 
 .info {
   width: 80%;
@@ -291,6 +302,7 @@ header {
       color: black; }
   .info h1 {
     margin-top: 20%;
+    margin-bottom: 50px;
     text-align: center; }
     @media (min-width: 768px) {
       .info h1 {
@@ -391,7 +403,7 @@ header {
   .mobile .logo {
     position: absolute;
     background-color: black;
-    right: 0;
+    left: 0;
     top: 0;
     padding: 2.5%;
     width: 20%;

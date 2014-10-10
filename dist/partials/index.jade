@@ -1,0 +1,98 @@
+//- Container
+
+.frame(du-scroll-container, style="background: black")
+
+	header
+		img(class="logo", ng-src="img/logo.png")
+		//- Work on caching images ahead of time
+		ul
+			li(ng-repeat="quote in body.individualQuote", 
+				hover-pic, 
+				img="{{quote.fields.artistImage.fields.file.url}}",
+				ng-click="launchVid(quote)",
+				id="{{quote.sys.id}}")
+				//- span(class="fa fa-caret-right")
+				span(class="name", ng-bind-html="trust(quote.fields.titleName)")
+		
+		.link-box
+			a(href="http://www.redbullmusicacademy.jp/jp/events/", class="header-link") Event Calendar
+		.link-box
+			a(href="http://www.redbullmusicacademy.jp/jp/home", class="header-link") REDBULLMUSICACADEMY.JP
+
+		.button-group
+				
+			.button
+				a(href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+					span(class="fa fa-twitter")
+
+					
+			.button
+				a(href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+					span(class="fa fa-facebook")
+
+
+
+
+				
+
+	
+
+	.image-wrapper
+		div(class="panoram", slide, image="https://images.contentful.com/4xlwm16911zp/2BUXHQlW3uOO8o2OKGy64i/bb3a7cfed95bc1e0d63e584298e18b71/panorama-web.jpg")
+		h1 {{body.body}}
+	
+
+
+
+
+	.video-wrapper(class="fade", ng-show="playing")
+		div(class="video")
+			youtube-video(id="main-vid", video-id="current.fields.youtubeId", player-vars="playerVars")
+
+	
+
+
+
+	
+
+	.info(class="fade", ng-show="showInfo")
+		span(class="fa fa-times", ng-click="closeInfo()")
+		h1(ng-bind-html="trust(titleName)")
+		div(class="info-body", ng-bind-html="trust(artistText)")
+		//- a(class="navi fa fa-arrow-right", ng-click="nextVideo()")
+
+
+	
+
+
+
+
+	.mobile
+		img(class="logo", src="img/logo.png")
+		.mobile-title
+			
+		
+		.mobile-body
+			h2 {{body.body}}
+
+			ul
+				li(ng-repeat="quote in body.individualQuote")
+					h1(ng-bind-html="trust(quote.fields.titleName)")
+					div(lazy, class="lazyYT", videoid="{{quote.fields.youtubeId}}", data-parameters="controls=0&modestbranding=1", data-ratio="4:3") loading...
+					div(ng-bind-html="trust(quote.fields.artistText)")
+
+			
+			.button-group
+					
+				.button
+					a(class="fa fa-twitter", href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&via=rbma&text=Share Text Here", target="blank")
+
+						
+				.button
+					a(class="fa fa-facebook", href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp", target="blank")
+							
+				
+
+
+
+

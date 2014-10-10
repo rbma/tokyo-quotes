@@ -1,0 +1,46 @@
+
+<div du-scroll-container="du-scroll-container" style="background: black" class="frame">
+  <header><img ng-src="img/logo.png" class="logo"/>
+    <ul>
+      <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote)" id="{{quote.sys.id}}"><span ng-bind-html="trust(quote.fields.titleName)" class="name"></span>
+      </li>
+    </ul>
+    <div class="link-box"><a href="http://www.redbullmusicacademy.jp/jp/events/" class="header-link">Event Calendar</a></div>
+    <div class="link-box"><a href="http://www.redbullmusicacademy.jp/jp/home" class="header-link">REDBULLMUSICACADEMY.JP</a></div>
+    <div class="button-group">
+      <div class="button"><a href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&amp;via=rbma&amp;text=Share Text Here" target="blank"><span class="fa fa-twitter"></span></a></div>
+      <div class="button"><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp" target="blank"><span class="fa fa-facebook"></span></a></div>
+    </div>
+  </header>
+  <div class="image-wrapper">
+    <div slide="slide" image="https://images.contentful.com/4xlwm16911zp/2BUXHQlW3uOO8o2OKGy64i/bb3a7cfed95bc1e0d63e584298e18b71/panorama-web.jpg" class="panoram"></div>
+    <h1>{{body.body}}</h1>
+  </div>
+  <div ng-show="playing" class="video-wrapper fade">
+    <div class="video">
+      <youtube-video id="main-vid" video-id="current.fields.youtubeId" player-vars="playerVars"></youtube-video>
+    </div>
+  </div>
+  <div ng-show="showInfo" class="info fade"><span ng-click="closeInfo()" class="fa fa-times"></span>
+    <h1 ng-bind-html="trust(titleName)"></h1>
+    <div ng-bind-html="trust(artistText)" class="info-body"></div>
+    
+  </div>
+  <div class="mobile"><img src="img/logo.png" class="logo"/>
+    <div class="mobile-title"></div>
+    <div class="mobile-body">
+      <h2>{{body.body}}</h2>
+      <ul>
+        <li ng-repeat="quote in body.individualQuote">
+          <h1 ng-bind-html="trust(quote.fields.titleName)"></h1>
+          <div lazy="lazy" videoid="{{quote.fields.youtubeId}}" data-parameters="controls=0&amp;modestbranding=1" data-ratio="4:3" class="lazyYT">loading...</div>
+          <div ng-bind-html="trust(quote.fields.artistText)"></div>
+        </li>
+      </ul>
+      <div class="button-group">
+        <div class="button"><a href="https://twitter.com/share?url=http://www.redbullmusicacademy.jp&amp;via=rbma&amp;text=Share Text Here" target="blank" class="fa fa-twitter"></a></div>
+        <div class="button"><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.redbullmusicacademy.jp" target="blank" class="fa fa-facebook"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
