@@ -41,6 +41,7 @@ quoteControllers.controller('IndexCtrl', [
 		
 		$scope.$on('youtube.player.ready', ($event, player) ->
 			$scope.player = player
+			console.log $scope.player
 		)
 
 		
@@ -89,6 +90,7 @@ quoteControllers.controller('IndexCtrl', [
 
 			$scope.launchVid = (quote) ->
 				$scope.playing = true
+
 
 				video = quote.fields.youtubeId
 

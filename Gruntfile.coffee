@@ -21,6 +21,7 @@ module.exports = (grunt) ->
 					"bower_components/contentful/dist/contentful.min.js"
 					"bower_components/ng-contentful/ng-contentful.js"
 					"bower_components/showdown/src/showdown.js"
+					"js/spin.js"
 					"js/lazy-yt.js"
 					"js/app.js"
 					"js/controllers.js"

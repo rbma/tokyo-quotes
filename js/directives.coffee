@@ -18,10 +18,11 @@ quoteDirectives.directive('lazy', ->
 )
 
 
-quoteDirectives.directive('slide', ['$window', ($window) ->
+quoteDirectives.directive('slide', ['$window', '$rootScope', ($window, $rootScope) ->
 	
 	link = ($scope, element, attrs) ->
 		element.bind('load', (event) ->
+			$rootScope.$broadcast('loaded')
 			imgWidth = element.width()
 			imgHeight = element.height()
 
@@ -78,6 +79,36 @@ quoteDirectives.directive('slide', ['$window', ($window) ->
 			reset()
 			)
 		
+
+
+	return{
+		link: link
+	}
+])
+
+
+
+
+quoteDirectives.directive('spin', ['$rootScope', ($rootScope) ->
+
+	target = document.getElementById("spinner")
+
+	link = ($scope, element, attrs) ->
+
+		opts = {
+			lines: 13
+			color: '#fff'
+		}
+
+		spinner = new Spinner(opts)
+		
+		spinner.spin(target)
+
+
+	$rootScope.$on('loaded', (event) ->
+		target.remove()
+	)
+
 
 
 	return{
