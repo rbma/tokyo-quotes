@@ -194,7 +194,11 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 				scene.add( ambient )
 
 				directionalLight = new THREE.DirectionalLight( 0xffeedd )
-				directionalLight.position.set( 1, 0, 1 )
+				directionalLight.position.set( 100, 0, 1 )
+				scene.add( directionalLight )
+
+				directionalLight = new THREE.DirectionalLight( 0xffffff )
+				directionalLight.position.set( 20, 20, 0 )
 				scene.add( directionalLight )
 
 				#texture
@@ -205,7 +209,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 
-				texture = THREE.ImageUtils.loadTexture( "img/foil.jpg" );
+				texture = THREE.ImageUtils.loadTexture( "img/pattern_poster.jpg" );
 				# texture.wrapS = THREE.RepeatWrapping
 				# texture.wrapT = THREE.RepeatWrapping
 				# texture.repeat.set( 1, 2 )
@@ -258,8 +262,8 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 				render()
 
 			render = ->
-				camera.position.x += ( mouseX - camera.position.x ) * .5
-				camera.position.y += ( - mouseY - camera.position.y ) * .5
+				camera.position.x += ( mouseX - camera.position.x ) * .1
+				camera.position.y += ( - mouseY - camera.position.y ) * .1
 
 				camera.lookAt( scene.position )
 
