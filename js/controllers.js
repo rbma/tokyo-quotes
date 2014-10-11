@@ -63,7 +63,6 @@
                 e.playing = true;
                 u();
                 t = n.fields.youtubeId;
-                console.log("called");
                 e.player.loadVideoById(t);
                 e.player.playVideo();
                 e.titleName = n.fields.titleName;

@@ -102,7 +102,6 @@ quoteControllers.controller('IndexCtrl', [
 
 				video = quote.fields.youtubeId
 
-				console.log 'called'
 				
 				$scope.player.loadVideoById(video)
 				
