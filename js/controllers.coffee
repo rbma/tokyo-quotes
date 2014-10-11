@@ -29,20 +29,20 @@ quoteControllers.controller('IndexCtrl', [
 		$scope.showInfo = false
 		
 		showVideo = ->
-			$(".video-wrapper").removeClass "hidden"
+			$(".video-wrapper").removeClass "dontshow"
 
 		hideVideo = ->
-			$(".video-wrapper").addClass "hidden"
+			$(".video-wrapper").addClass "dontshow"
 
 		#yt parameters
 		$scope.playerVars = {
+			wmode: 'opaque'
 			controls: 0
 			autoplay: 0
 			modestbranding: 1
 			showinfo: 0
 			hd: 1
 			enablejsapi: 1
-			origin: '*'
 		}
 
 		
@@ -102,12 +102,12 @@ quoteControllers.controller('IndexCtrl', [
 
 				video = quote.fields.youtubeId
 
-
+				console.log 'called'
 				
 				$scope.player.loadVideoById(video)
 				
 				#play video
-				# $scope.player.playVideo()
+				$scope.player.playVideo()
 
 				$scope.titleName = quote.fields.titleName
 				$scope.artistText = quote.fields.artistText

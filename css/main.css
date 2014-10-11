@@ -328,6 +328,8 @@ header {
   height: 100%;
   padding-top: 3.5%;
   background-color: black !important; }
+  .video-wrapper.dontshow {
+    left: -99999px; }
   @media (max-width: 1024px) {
     .video-wrapper {
       display: none; } }
