@@ -247,20 +247,26 @@ header {
     .image-wrapper {
       display: none !important; } }
   .image-wrapper h1 {
-    right: 20px;
-    top: 20px;
+    bottom: 100px;
     line-height: 1.5;
-    width: 40%;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     text-transform: none;
-    font-size: 1.2em;
-    color: white;
+    font-size: 1.5em;
+    color: black;
     position: absolute;
     font-family: 'clan', helvetica, sans-serif;
-    background-color: white !important;
-    color: black;
-    padding: 5px 10px;
+    color: white;
+    padding: 5px 20px;
     z-index: 9999999999999; }
+  .image-wrapper .threed {
+    z-index: 99999999999;
+    width: 2000px;
+    height: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent; }
   .image-wrapper .panoram {
     height: 100%;
     width: auto;

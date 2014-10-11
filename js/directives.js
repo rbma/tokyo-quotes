@@ -4,10 +4,10 @@
     n = angular.module("quoteDirectives", []);
     n.directive("lazy", function() {
         var n;
-        n = function(n, e, r) {
-            var i;
-            i = r.videoid;
-            e.data("youtube-id", i);
+        n = function(n, e, i) {
+            var t;
+            t = i.videoid;
+            e.data("youtube-id", t);
             return e.lazyYT();
         };
         return {
@@ -15,36 +15,37 @@
         };
     });
     n.directive("slide", [ "$window", "$rootScope", function(n, e) {
-        var r;
-        r = function(r, i, t) {
-            return i.bind("load", function(r) {
-                var t, o, u, c;
+        var i;
+        i = function(i, t, r) {
+            return t.bind("load", function(i) {
+                var r, o, u, a;
                 e.$broadcast("loaded");
-                i.show();
-                o = i.width();
-                t = i.height();
-                u = o / t;
-                c = function() {
-                    var e, r, t, o, u, c, a;
-                    u = n.innerHeight;
-                    c = n.innerWidth;
-                    if (u < 700) {
-                        u = 700;
+                t.show();
+                o = t.width();
+                r = t.height();
+                u = o / r;
+                a = function() {
+                    var e, i, r, o, a, d, c;
+                    a = n.innerHeight;
+                    d = n.innerWidth;
+                    if (a < 700) {
+                        a = 700;
                     }
-                    i.height(u);
-                    a = $(".image-wrapper").width();
-                    e = i.width() - a;
+                    t.height(a);
+                    t.width(a * u);
+                    c = $(".image-wrapper").width();
+                    e = t.width() - c;
                     o = e / 2;
-                    r = c * .2;
+                    i = d * .2;
                     $(".panoram").css({
-                        width: i.width() + "px",
-                        height: i.height() + "px",
+                        width: t.width() + "px",
+                        height: t.height() + "px",
                         left: -o * 1.5 + "px"
                     });
-                    i.bind("mousemove", function(n) {
-                        return t(n);
+                    t.bind("mousemove", function(n) {
+                        return r(n);
                     });
-                    return t = function(n) {
+                    return r = function(n) {
                         var e;
                         e = -n.clientX * 1.5;
                         return $(".panoram").css({
@@ -53,29 +54,29 @@
                     };
                 };
                 $(window).bind("resize", function(n) {
-                    return c();
+                    return a();
                 });
-                return c();
+                return a();
             });
         };
         return {
-            link: r
+            link: i
         };
     } ]);
     n.directive("spin", [ "$rootScope", function(n) {
-        var e, r;
-        r = document.getElementById("spinner");
-        e = function(n, e, i) {
-            var t, o;
-            t = {
+        var e, i;
+        i = document.getElementById("spinner");
+        e = function(n, e, t) {
+            var r, o;
+            r = {
                 lines: 13,
                 color: "#fff"
             };
-            o = new Spinner(t);
-            return o.spin(r);
+            o = new Spinner(r);
+            return o.spin(i);
         };
         n.$on("loaded", function(n) {
-            return r.remove();
+            return i.remove();
         });
         return {
             link: e
@@ -84,31 +85,31 @@
     n.directive("hoverPic", function() {
         var n, e;
         e = function(n) {
-            var e, r;
+            var e, i;
             e = n.clientX * 2;
-            r = n.clientY * 2;
+            i = n.clientY * 2;
             return $(".frame").css({
-                backgroundPosition: "" + e + "px " + r + "px"
+                backgroundPosition: "" + e + "px " + i + "px"
             });
         };
-        n = function(n, r, i) {
-            r.unbind("mouseenter");
-            r.bind("mouseenter", function() {
+        n = function(n, i, t) {
+            i.unbind("mouseenter");
+            i.bind("mouseenter", function() {
                 var n;
-                n = i.img;
+                n = t.img;
                 $(".frame").css({
                     background: "url(" + n + ")"
                 });
                 return $(".image-wrapper").hide();
             });
-            r.unbind("mouseleave");
-            r.bind("mouseleave", function() {
+            i.unbind("mouseleave");
+            i.bind("mouseleave", function() {
                 $(".frame").css({
                     background: "black"
                 });
                 return $(".image-wrapper").show();
             });
-            return r.bind("mousemove", function(n) {
+            return i.bind("mousemove", function(n) {
                 return e(n);
             });
         };
@@ -116,4 +117,83 @@
             link: n
         };
     });
+    n.directive("scene", [ "$window", function(n) {
+        var e;
+        e = function(e, i, t) {
+            var r, o, u, a, d, c, s, l, f, p, h, m, w, v;
+            u = {};
+            m = {};
+            o = {};
+            h = {};
+            p = {};
+            d = 0;
+            c = 0;
+            w = n.innerWidth / 2;
+            v = n.innerHeight / 2;
+            a = function() {
+                var e, i, t, r, a;
+                u = document.getElementById("threed");
+                o = new THREE.PerspectiveCamera(45, n.innerWidth / n.innerHeight, 1, 1e4);
+                o.position.z = 100;
+                o.position.x = 0;
+                o.position.y = 100;
+                h = new THREE.Scene();
+                e = new THREE.AmbientLight(16777215);
+                h.add(e);
+                i = new THREE.DirectionalLight(16772829);
+                i.position.set(1, 0, 1);
+                h.add(i);
+                r = new THREE.LoadingManager();
+                r.onProgress = function(n, e, i) {
+                    return console.log(n, e, i);
+                };
+                a = THREE.ImageUtils.loadTexture("img/foil.jpg");
+                a.needsUpdate = true;
+                t = new THREE.OBJLoader(r);
+                t.load("obj/quote_clan.obj", function(n) {
+                    n.traverse(function(n) {
+                        if (n instanceof THREE.Mesh) {
+                            return n.material.map = a;
+                        }
+                    });
+                    n.position.y = 0;
+                    n.position.x = -20;
+                    return h.add(n);
+                });
+                p = new THREE.WebGLRenderer({
+                    alpha: true
+                });
+                p.setSize(n.innerWidth, n.innerHeight);
+                u.appendChild(p.domElement);
+                document.addEventListener("mousemove", s, false);
+                return window.addEventListener("resize", l, false);
+            };
+            l = function() {
+                w = window.innerWidth / 4;
+                v = window.innerHeight / 4;
+                o.aspect = n.innerWidth / 2 / window.innerHeight;
+                o.updateProjectionMatrix();
+                return p.setSize(n.innerWidth / 2, window.innerHeight);
+            };
+            s = function(n) {
+                d = (n.clientX - w) / 2;
+                return c = (n.clientY - v) / 2;
+            };
+            r = function() {
+                requestAnimationFrame(r);
+                return f();
+            };
+            f = function() {
+                o.position.x += (d - o.position.x) * .5;
+                o.position.y += (-c - o.position.y) * .5;
+                o.lookAt(h.position);
+                return p.render(h, o);
+            };
+            a();
+            return r();
+        };
+        return {
+            link: e
+        };
+    } ]);
 }).call(this);

@@ -38,6 +38,8 @@ quoteDirectives.directive('slide', ['$window', '$rootScope', ($window, $rootScop
 
 				element.height(winHeight)
 
+				element.width(winHeight * ratio)
+
 				wrapperWidth = $('.image-wrapper').width()
 
 				#get diff
@@ -156,3 +158,121 @@ quoteDirectives.directive('hoverPic', ->
 		link: link
 	}
 )
+
+
+quoteDirectives.directive('scene', ['$window', ($window) ->
+
+	link = ($scope, element, attrs) ->
+			container = {}
+			stats = {}
+			camera = {}
+			scene = {}
+			renderer = {}
+			mouseX = 0
+			mouseY = 0
+
+			windowHalfX = $window.innerWidth / 2
+			windowHalfY = $window.innerHeight / 2
+
+
+
+			init = ->
+
+				container = document.getElementById('threed')
+
+
+				camera = new THREE.PerspectiveCamera( 45, ($window.innerWidth) / $window.innerHeight, 1, 10000)
+				camera.position.z = 100
+				camera.position.x = 0
+				camera.position.y = 100
+
+				#scene
+
+				scene = new THREE.Scene()
+
+				ambient = new THREE.AmbientLight( 0xffffff )
+				scene.add( ambient )
+
+				directionalLight = new THREE.DirectionalLight( 0xffeedd )
+				directionalLight.position.set( 1, 0, 1 )
+				scene.add( directionalLight )
+
+				#texture
+
+				manager = new THREE.LoadingManager()
+				manager.onProgress = (item, loaded, total) ->
+					console.log( item, loaded, total )
+
+
+
+				texture = THREE.ImageUtils.loadTexture( "img/foil.jpg" );
+				# texture.wrapS = THREE.RepeatWrapping
+				# texture.wrapT = THREE.RepeatWrapping
+				# texture.repeat.set( 1, 2 )
+				texture.needsUpdate = true
+
+
+				#model
+
+				loader = new THREE.OBJLoader( manager )
+				loader.load( 'obj/quote_clan.obj', (object) ->
+
+					object.traverse (child) ->
+						if child instanceof THREE.Mesh
+							child.material.map = texture
+
+					# object.scale(2,2,2)
+					object.position.y = 0
+					object.position.x = -20
+					scene.add( object )
+				)
+
+
+
+				renderer = new THREE.WebGLRenderer({alpha: true})
+				renderer.setSize( $window.innerWidth, $window.innerHeight )
+				container.appendChild( renderer.domElement )
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false )
+
+				window.addEventListener( 'resize', onWindowResize, false )
+
+
+			onWindowResize = ->
+				windowHalfX = window.innerWidth / 4
+				windowHalfY = window.innerHeight / 4
+
+				camera.aspect = ($window.innerWidth / 2) / window.innerHeight
+				camera.updateProjectionMatrix()
+
+				renderer.setSize( $window.innerWidth / 2, window.innerHeight )
+
+
+			onDocumentMouseMove = (event) ->
+				mouseX = ( event.clientX - windowHalfX ) / 2
+				mouseY = ( event.clientY - windowHalfY ) / 2
+
+			animate = ->
+
+				requestAnimationFrame( animate )
+				render()
+
+			render = ->
+				camera.position.x += ( mouseX - camera.position.x ) * .5
+				camera.position.y += ( - mouseY - camera.position.y ) * .5
+
+				camera.lookAt( scene.position )
+
+				renderer.render( scene, camera )
+
+			init()
+			animate()
+
+
+
+
+	return{
+		link: link
+	}
+])
+

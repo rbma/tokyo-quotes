@@ -13,21 +13,28 @@
 		display: none !important;
 	}
 	h1{
-		right: 20px;
-		top: 20px;
+		bottom: 100px;
 		line-height: 1.5;
-		width: 40%;
+		width: 100%;
 		-webkit-font-smoothing: antialiased;
 		text-transform: none;
-		font-size: 1.2em;
+		font-size: 1.5em;
 		// background-color: black;
-		color: white;
+		color: black;
 		position: absolute;
 		font-family: 'clan', helvetica, sans-serif;
-		background-color: white !important;
-		color: black;
-		padding: 5px 10px;
+		color: white;
+		padding: 5px 20px;
 		z-index: 9999999999999;
+	}
+	.threed{
+		z-index: 99999999999;
+		width: 2000px;
+		height: 1500px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: transparent;
 	}
 	.panoram{
 		height: 100%;
@@ -97,3 +104,4 @@
 		display: none;
 	}
 }
+
