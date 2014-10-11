@@ -1,5 +1,5 @@
 doctype html
-html(lang="jp", ng-app="quotes", class="frame", itemscope, itemtype="http://schema.org/WebSite")
+html(lang="jp", ng-app="quotes", class="no-js", itemscope, itemtype="http://schema.org/WebSite")
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0")
@@ -13,6 +13,7 @@ html(lang="jp", ng-app="quotes", class="frame", itemscope, itemtype="http://sche
 		link(rel="stylesheet", type="text/css", href="css/normalize.css")
 		link(rel="stylesheet", type="text/css", href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
 		link(rel="stylesheet", type="text/css", href="css/main.css")
+		script(src="js/modernizr.custom.js")
 
 		//- prefetch all images if possible
 		link(rel="prefetch", href="https://images.contentful.com/4xlwm16911zp/583bwx3932MsGKYcMqiyQK/8b4be82613c8c6a6843b5d8093c53662/panorama-web.jpg")
@@ -64,7 +65,6 @@ html(lang="jp", ng-app="quotes", class="frame", itemscope, itemtype="http://sche
 		script(src="bower_components/angular-animate/angular-animate.min.js")
 		script(src="bower_components/contentful/dist/contentful.min.js")
 		script(src="bower_components/ng-contentful/ng-contentful.js")
-		script(src="bower_components/showdown/compressed/showdown.js")
 		script(src="bower_components/three.js/three.min.js")
 		script(src="js/object-loader.js")
 		script(src="bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js")

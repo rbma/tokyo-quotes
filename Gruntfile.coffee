@@ -13,6 +13,7 @@ module.exports = (grunt) ->
 				#files to concatenate
 				src: [
 					"bower_components/angular/angular.min.js"
+					"js/modernizr.custom.js"
 					"bower_components/angular-route/angular-route.js"
 					"bower_components/angular-sanitize/angular-sanitize.min.js"
 					"bower_components/angular-scroll/angular-scroll.min.js"
@@ -21,6 +22,8 @@ module.exports = (grunt) ->
 					"bower_components/contentful/dist/contentful.min.js"
 					"bower_components/ng-contentful/ng-contentful.js"
 					"bower_components/showdown/src/showdown.js"
+					"bower_components/three.js/three.min.js"
+					"js/object-loader.js"
 					"js/spin.js"
 					"js/lazy-yt.js"
 					"js/app.js"
@@ -76,6 +79,7 @@ module.exports = (grunt) ->
 						'fonts/*'
 						'img/*'
 						'partials/*'
+						'obj/*'
 					]
 					dest: "dist/"
 				]
