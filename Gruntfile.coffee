@@ -13,7 +13,6 @@ module.exports = (grunt) ->
 				#files to concatenate
 				src: [
 					"bower_components/angular/angular.min.js"
-					"js/modernizr.custom.js"
 					"bower_components/angular-route/angular-route.js"
 					"bower_components/angular-sanitize/angular-sanitize.min.js"
 					"bower_components/angular-scroll/angular-scroll.min.js"
