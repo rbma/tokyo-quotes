@@ -267,22 +267,6 @@ header {
     top: 0;
     left: 0;
     background-color: transparent; }
-  .image-wrapper .panoram {
-    height: 100%;
-    width: auto;
-    position: absolute;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -ms-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    -webkit-transition: all 0.2 linear;
-    -moz-transition: all 0.2 linear;
-    -ms-transition: all 0.2 linear;
-    -o-transition: all 0.2 linear;
-    transition: all 0.2 linear; }
-    .image-wrapper .panoram img {
-      display: none; }
 
 .info {
   width: 80%;

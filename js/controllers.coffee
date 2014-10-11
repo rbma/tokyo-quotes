@@ -19,8 +19,8 @@ quoteControllers.controller('IndexCtrl', [
 		$scope.player = {}
 		$scope.background = {}
 
-
-		order = 0
+		$scope.reload = ->
+			window.location.reload()
 
 		#video is initially visible
 		$scope.playing = false

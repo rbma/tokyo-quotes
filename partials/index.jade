@@ -3,7 +3,7 @@
 .frame(du-scroll-container, style="background: black")
 
 	header
-		img(class="logo", ng-src="img/logo.png")
+		img(class="logo", ng-src="img/logo.png", ng-click="reload()")
 		//- Work on caching images ahead of time
 		ul
 			li(ng-repeat="quote in body.individualQuote", 

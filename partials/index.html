@@ -1,6 +1,6 @@
 
 <div du-scroll-container="du-scroll-container" style="background: black" class="frame">
-  <header><img ng-src="img/logo.png" class="logo"/>
+  <header><img ng-src="img/logo.png" ng-click="reload()" class="logo"/>
     <ul>
       <li ng-repeat="quote in body.individualQuote" hover-pic="hover-pic" img="{{quote.fields.artistImage.fields.file.url}}" ng-click="launchVid(quote)" id="{{quote.sys.id}}"><span ng-bind-html="trust(quote.fields.titleName)" class="name"></span>
       </li>

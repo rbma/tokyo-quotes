@@ -36,16 +36,6 @@
 		left: 0;
 		background-color: transparent;
 	}
-	.panoram{
-		height: 100%;
-		width: auto;
-		position: absolute;
-		@include vendorize(background-size, cover !important);
-		@include vendorize(transition, all .2 linear);
-		img{
-			display: none;
-		}
-	}
 }
 
 .info{
