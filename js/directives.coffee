@@ -182,7 +182,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 				camera = new THREE.PerspectiveCamera( 45, ($window.innerWidth) / $window.innerHeight, 1, 10000)
-				camera.position.z = 100
+				camera.position.z = 400
 				camera.position.x = 0
 				camera.position.y = 100
 
@@ -219,15 +219,15 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 				#model
 
 				loader = new THREE.OBJLoader( manager )
-				loader.load( 'obj/quote_clan.obj', (object) ->
+				loader.load( 'obj/quotes.obj', (object) ->
 
 					object.traverse (child) ->
 						if child instanceof THREE.Mesh
 							child.material.map = texture
 
 					# object.scale(2,2,2)
-					object.position.y = 0
-					object.position.x = -20
+					object.position.y = -30
+					object.position.x = -60
 					scene.add( object )
 				)
 
