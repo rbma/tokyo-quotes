@@ -160,7 +160,7 @@
                         }
                     });
                     n.position.y = -30;
-                    n.position.x = -60;
+                    n.position.x = -70;
                     return h.add(n);
                 });
                 f = new THREE.WebGLRenderer({
@@ -172,11 +172,11 @@
                 return window.addEventListener("resize", l, false);
             };
             l = function() {
-                w = window.innerWidth / 4;
-                v = window.innerHeight / 4;
-                o.aspect = n.innerWidth / 2 / window.innerHeight;
+                w = window.innerWidth / 2;
+                v = window.innerHeight / 2;
+                o.aspect = n.innerWidth / window.innerHeight;
                 o.updateProjectionMatrix();
-                return f.setSize(n.innerWidth / 2, window.innerHeight);
+                return f.setSize(n.innerWidth, window.innerHeight);
             };
             s = function(n) {
                 d = (n.clientX - w) / 2;
@@ -187,7 +187,7 @@
                 return p();
             };
             p = function() {
-                o.position.x += (d - o.position.x) * .1;
+                o.position.x += (d - o.position.x) * .05;
                 o.position.y += (-c - o.position.y) * .1;
                 o.lookAt(h.position);
                 return f.render(h, o);

@@ -18,6 +18,13 @@ quoteDirectives.directive('lazy', ->
 )
 
 
+
+
+
+
+
+
+
 quoteDirectives.directive('slide', ['$window', '$rootScope', ($window, $rootScope) ->
 	
 	link = ($scope, element, attrs) ->
@@ -85,6 +92,13 @@ quoteDirectives.directive('slide', ['$window', '$rootScope', ($window, $rootScop
 
 
 
+
+
+
+
+
+
+
 quoteDirectives.directive('spin', ['$rootScope', ($rootScope) ->
 
 	target = document.getElementById("spinner")
@@ -111,6 +125,13 @@ quoteDirectives.directive('spin', ['$rootScope', ($rootScope) ->
 		link: link
 	}
 ])
+
+
+
+
+
+
+
 
 
 
@@ -158,6 +179,11 @@ quoteDirectives.directive('hoverPic', ->
 		link: link
 	}
 )
+
+
+
+
+
 
 
 quoteDirectives.directive('scene', ['$window', ($window) ->
@@ -227,7 +253,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 					# object.scale(2,2,2)
 					object.position.y = -30
-					object.position.x = -60
+					object.position.x = -70
 					scene.add( object )
 				)
 
@@ -243,13 +269,13 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 			onWindowResize = ->
-				windowHalfX = window.innerWidth / 4
-				windowHalfY = window.innerHeight / 4
+				windowHalfX = window.innerWidth / 2
+				windowHalfY = window.innerHeight / 2
 
-				camera.aspect = ($window.innerWidth / 2) / window.innerHeight
+				camera.aspect = ($window.innerWidth) / window.innerHeight
 				camera.updateProjectionMatrix()
 
-				renderer.setSize( $window.innerWidth / 2, window.innerHeight )
+				renderer.setSize( $window.innerWidth, window.innerHeight )
 
 
 			onDocumentMouseMove = (event) ->
@@ -262,7 +288,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 				render()
 
 			render = ->
-				camera.position.x += ( mouseX - camera.position.x ) * .1
+				camera.position.x += ( mouseX - camera.position.x ) * .05
 				camera.position.y += ( - mouseY - camera.position.y ) * .1
 
 				camera.lookAt( scene.position )
