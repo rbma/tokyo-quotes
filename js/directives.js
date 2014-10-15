@@ -120,7 +120,7 @@
     n.directive("scene", [ "$window", function(n) {
         var e;
         e = function(e, i, t) {
-            var r, o, u, a, d, c, s, l, p, f, h, m, w, v;
+            var r, o, u, a, d, c, s, l, p, f, h, m, w, g, v;
             u = {};
             m = {};
             o = {};
@@ -128,8 +128,21 @@
             f = {};
             d = 0;
             c = 0;
-            w = n.innerWidth / 2;
+            g = n.innerWidth / 2;
             v = n.innerHeight / 2;
+            w = function() {
+                var n, e, i;
+                n = document.createElement("canvas");
+                i = false;
+                try {
+                    i = !!(n.getContext("webgl") || n.getContext("experimental-webgl"));
+                } catch (t) {
+                    e = t;
+                    alert("no support");
+                }
+                return i;
+            };
+            w();
             a = function() {
                 var e, i, t, r, a;
                 u = document.getElementById("threed");
@@ -172,14 +185,14 @@
                 return window.addEventListener("resize", l, false);
             };
             l = function() {
-                w = window.innerWidth / 2;
+                g = window.innerWidth / 2;
                 v = window.innerHeight / 2;
                 o.aspect = n.innerWidth / window.innerHeight;
                 o.updateProjectionMatrix();
                 return f.setSize(n.innerWidth, window.innerHeight);
             };
             s = function(n) {
-                d = (n.clientX - w) / 2;
+                d = (n.clientX - g) / 2;
                 return c = (n.clientY - v) / 2;
             };
             r = function() {

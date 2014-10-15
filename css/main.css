@@ -57,6 +57,7 @@ body {
   background-color: black;
   margin: 0;
   background-position: top center;
+  -webkit-overflow-scrolling: touch;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -ms-background-size: cover !important;
@@ -268,6 +269,12 @@ header {
     top: 0;
     left: 0;
     background-color: transparent; }
+    .image-wrapper .threed.no-gl {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      margin-top: 5%;
+      z-index: 9; }
 
 .info {
   width: 80%;
@@ -396,8 +403,8 @@ header {
     height: 80%;
     width: 100%;
     overflow: hidden;
-    background: url("../img/panorama-crop.jpg") no-repeat center center;
-    background-size: cover; }
+    background: url("../img/quotes.png") no-repeat center center;
+    background-size: contain; }
   .mobile .logo {
     position: absolute;
     background-color: black;
@@ -412,11 +419,12 @@ header {
     background-color: black;
     color: white;
     opacity: 1;
-    top: 80%;
+    top: 70%;
     width: 100%; }
     .mobile .mobile-body h2 {
       padding: 0 5%;
-      text-align: center; }
+      text-align: center;
+      font-size: 1em; }
     .mobile .mobile-body ul {
       text-align: center;
       padding: 0; }

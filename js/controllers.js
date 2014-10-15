@@ -2,23 +2,24 @@
     "use strict";
     var e;
     e = angular.module("quoteControllers", []);
-    e.controller("IndexCtrl", [ "$scope", "$window", "$http", "$sce", "contentfulClient", function(e, n, t, o, r) {
-        var a, l, u;
-        a = new Showdown.converter();
+    e.controller("IndexCtrl", [ "$scope", "$window", "$http", "$sce", "contentfulClient", "webgl", function(e, n, t, o, r, a) {
+        var l, u, i;
+        l = new Showdown.converter();
         e.body = {};
         e.videoStopped = false;
         e.begin = true;
         e.player = {};
         e.background = {};
+        e.webglenabled = a.checkWebGL();
         e.reload = function() {
             return window.location.reload();
         };
         e.playing = false;
         e.showInfo = false;
-        u = function() {
+        i = function() {
             return $(".video-wrapper").removeClass("dontshow");
         };
-        l = function() {
+        u = function() {
             return $(".video-wrapper").addClass("dontshow");
         };
         e.playerVars = {
@@ -36,7 +37,7 @@
         e.$on("youtube.player.ended", function(n, t) {
             e.playing = false;
             e.showInfo = true;
-            return l();
+            return u();
         });
         e.$watch("playing", function(e) {
             return console.log(e);
@@ -46,22 +47,22 @@
             content_type: "3NIaEMnF5CcQOCUeUaGESy",
             include: 1
         }).then(function(n) {
-            var t, r, l, i, d;
+            var t, r, a, u, d;
             e.data = n[0];
             e.body = e.data.fields;
             e.background = e.body.bodyImage.fields.file.url;
             e.$watch("background", function(e) {});
             d = e.body.individualQuote;
-            for (l = 0, i = d.length; l < i; l++) {
-                t = d[l];
-                t.fields.artistText = a.makeHtml(t.fields.artistText);
+            for (a = 0, u = d.length; a < u; a++) {
+                t = d[a];
+                t.fields.artistText = l.makeHtml(t.fields.artistText);
             }
             r = e.body.individualQuote;
             e.current = r[0];
             e.launchVid = function(n) {
                 var t;
                 e.playing = true;
-                u();
+                i();
                 t = n.fields.youtubeId;
                 e.player.loadVideoById(t);
                 e.player.playVideo();

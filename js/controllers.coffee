@@ -8,7 +8,8 @@ quoteControllers.controller('IndexCtrl', [
 	'$http'
 	'$sce'
 	'contentfulClient'
-	($scope, $window, $http, $sce, contentfulClient) ->
+	'webgl'
+	($scope, $window, $http, $sce, contentfulClient, webgl) ->
 
 		converter = new Showdown.converter()
 
@@ -18,6 +19,10 @@ quoteControllers.controller('IndexCtrl', [
 		
 		$scope.player = {}
 		$scope.background = {}
+
+
+		#check if webGL is enabled
+		$scope.webglenabled = webgl.checkWebGL()
 
 		$scope.reload = ->
 			window.location.reload()

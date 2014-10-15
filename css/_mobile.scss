@@ -20,8 +20,8 @@
 		height: 80%;
 		width: 100%;
 		overflow: hidden;
-		background: url("../img/panorama-crop.jpg") no-repeat center center;
-		background-size: cover;
+		background: url("../img/quotes.png") no-repeat center center;
+		background-size: contain;
 	}
 
 	.logo{
@@ -40,12 +40,13 @@
 		background-color: black;
 		color: white;
 		opacity: 1;
-		top: 80%;
+		top: 70%;
 		width: 100%;
 		
 		h2{
 			padding: 0 5%;
 			text-align: center;
+			font-size: 1em;
 		}
 		ul{
 			text-align: center;

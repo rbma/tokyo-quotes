@@ -200,7 +200,18 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 			windowHalfX = $window.innerWidth / 2
 			windowHalfY = $window.innerHeight / 2
 
+			supportsWebGL = ->
+				canvas = document.createElement( 'canvas' )
+				webgl = false
+				try
+					webgl = !!( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) )
+				
+				catch e
+					alert 'no support'
+				
+				return webgl
 
+			supportsWebGL()
 
 			init = ->
 

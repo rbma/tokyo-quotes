@@ -13,7 +13,12 @@
     </div>
   </header>
   <div class="image-wrapper">
-    <div id="threed" scene="scene" class="threed"></div>
+    <div ng-if="webglenabled">
+      <div id="threed" scene="scene" class="threed"></div>
+    </div>
+    <div ng-if="!webglenabled">
+      <div class="threed no-gl"><img src="img/quotes.png"/></div>
+    </div>
     <h1>{{body.body}}</h1>
   </div>
   <div class="video-wrapper dontshow">
