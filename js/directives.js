@@ -174,7 +174,8 @@
                     return h.add(n);
                 });
                 p = new THREE.WebGLRenderer({
-                    alpha: true
+                    alpha: true,
+                    antialiasing: true
                 });
                 p.setSize(n.innerWidth, n.innerHeight);
                 u.appendChild(p.domElement);

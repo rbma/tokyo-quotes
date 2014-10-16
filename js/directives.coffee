@@ -263,7 +263,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 
-				renderer = new THREE.WebGLRenderer({alpha: true})
+				renderer = new THREE.WebGLRenderer({alpha: true, antialiasing: true})
 				renderer.setSize( $window.innerWidth, $window.innerHeight )
 				container.appendChild( renderer.domElement )
 
