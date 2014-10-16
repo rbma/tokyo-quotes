@@ -120,12 +120,12 @@
     n.directive("scene", [ "$window", function(n) {
         var e;
         e = function(e, i, t) {
-            var r, o, u, a, d, c, s, l, p, f, h, m, w, g, v;
+            var r, o, u, a, d, c, s, l, f, p, h, m, w, g, v;
             u = {};
             m = {};
             o = {};
             h = {};
-            f = {};
+            p = {};
             d = 0;
             c = 0;
             g = n.innerWidth / 2;
@@ -147,23 +147,20 @@
                 var e, i, t, r, a;
                 u = document.getElementById("threed");
                 o = new THREE.PerspectiveCamera(45, n.innerWidth / n.innerHeight, 1, 1e4);
-                o.position.z = 400;
-                o.position.x = 0;
+                o.position.z = 200;
+                o.position.x = -180;
                 o.position.y = 100;
                 h = new THREE.Scene();
                 e = new THREE.AmbientLight(16777215);
                 h.add(e);
                 i = new THREE.DirectionalLight(16772829);
-                i.position.set(100, 0, 1);
-                h.add(i);
-                i = new THREE.DirectionalLight(16777215);
-                i.position.set(20, 20, 0);
+                i.position.set(100, -20, 1);
                 h.add(i);
                 r = new THREE.LoadingManager();
                 r.onProgress = function(n, e, i) {
                     return console.log(n, e, i);
                 };
-                a = THREE.ImageUtils.loadTexture("img/pattern_poster.jpg");
+                a = THREE.ImageUtils.loadTexture("img/grad.png");
                 a.needsUpdate = true;
                 t = new THREE.OBJLoader(r);
                 t.load("obj/quotes.obj", function(n) {
@@ -172,15 +169,15 @@
                             return n.material.map = a;
                         }
                     });
-                    n.position.y = -30;
-                    n.position.x = -70;
+                    n.position.y = 0;
+                    n.position.x = -25;
                     return h.add(n);
                 });
-                f = new THREE.WebGLRenderer({
+                p = new THREE.WebGLRenderer({
                     alpha: true
                 });
-                f.setSize(n.innerWidth, n.innerHeight);
-                u.appendChild(f.domElement);
+                p.setSize(n.innerWidth, n.innerHeight);
+                u.appendChild(p.domElement);
                 document.addEventListener("mousemove", s, false);
                 return window.addEventListener("resize", l, false);
             };
@@ -189,21 +186,21 @@
                 v = window.innerHeight / 2;
                 o.aspect = n.innerWidth / window.innerHeight;
                 o.updateProjectionMatrix();
-                return f.setSize(n.innerWidth, window.innerHeight);
+                return p.setSize(n.innerWidth, window.innerHeight);
             };
             s = function(n) {
-                d = (n.clientX - g) / 2;
-                return c = (n.clientY - v) / 2;
+                d = (n.clientX - g) / 5;
+                return c = (n.clientY - v) / 10;
             };
             r = function() {
                 requestAnimationFrame(r);
-                return p();
+                return f();
             };
-            p = function() {
-                o.position.x += (d - o.position.x) * .05;
+            f = function() {
+                o.position.x += (-d - o.position.x) * .1;
                 o.position.y += (-c - o.position.y) * .1;
                 o.lookAt(h.position);
-                return f.render(h, o);
+                return p.render(h, o);
             };
             a();
             return r();

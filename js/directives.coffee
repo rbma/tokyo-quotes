@@ -219,8 +219,8 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 				camera = new THREE.PerspectiveCamera( 45, ($window.innerWidth) / $window.innerHeight, 1, 10000)
-				camera.position.z = 400
-				camera.position.x = 0
+				camera.position.z = 200
+				camera.position.x = -180
 				camera.position.y = 100
 
 				#scene
@@ -231,14 +231,10 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 				scene.add( ambient )
 
 				directionalLight = new THREE.DirectionalLight( 0xffeedd )
-				directionalLight.position.set( 100, 0, 1 )
+				directionalLight.position.set( 100, -20, 1 )
 				scene.add( directionalLight )
 
-				directionalLight = new THREE.DirectionalLight( 0xffffff )
-				directionalLight.position.set( 20, 20, 0 )
-				scene.add( directionalLight )
-
-				#texture
+				# directionalLight = new THREE.DirectionalLight( 0xffeedd )
 
 				manager = new THREE.LoadingManager()
 				manager.onProgress = (item, loaded, total) ->
@@ -246,10 +242,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 
-				texture = THREE.ImageUtils.loadTexture( "img/pattern_poster.jpg" );
-				# texture.wrapS = THREE.RepeatWrapping
-				# texture.wrapT = THREE.RepeatWrapping
-				# texture.repeat.set( 1, 2 )
+				texture = THREE.ImageUtils.loadTexture( "img/grad.png" );
 				texture.needsUpdate = true
 
 
@@ -263,8 +256,8 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 							child.material.map = texture
 
 					# object.scale(2,2,2)
-					object.position.y = -30
-					object.position.x = -70
+					object.position.y = 0
+					object.position.x = -25
 					scene.add( object )
 				)
 
@@ -290,8 +283,8 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 			onDocumentMouseMove = (event) ->
-				mouseX = ( event.clientX - windowHalfX ) / 2
-				mouseY = ( event.clientY - windowHalfY ) / 2
+				mouseX = ( event.clientX - windowHalfX ) / 5
+				mouseY = ( event.clientY - windowHalfY ) / 10
 
 			animate = ->
 
@@ -299,8 +292,8 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 				render()
 
 			render = ->
-				camera.position.x += ( mouseX - camera.position.x ) * .05
-				camera.position.y += ( - mouseY - camera.position.y ) * .1
+				camera.position.x += ( -mouseX - camera.position.x ) * .1
+				camera.position.y += ( -mouseY - camera.position.y ) * .1
 
 				camera.lookAt( scene.position )
 

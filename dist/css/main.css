@@ -57,6 +57,7 @@ body {
   background-color: black;
   margin: 0;
   background-position: top center;
+  -webkit-overflow-scrolling: touch;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -ms-background-size: cover !important;
@@ -119,6 +120,9 @@ p {
   -ms-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
+
+.hidden {
+  visibility: hidden !important; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -244,34 +248,33 @@ header {
     .image-wrapper {
       display: none !important; } }
   .image-wrapper h1 {
-    right: 20px;
-    top: 20px;
+    bottom: 100px;
     line-height: 1.5;
-    width: 40%;
+    width: 90%;
+    margin-left: 5%;
     -webkit-font-smoothing: antialiased;
     text-transform: none;
-    font-size: 1.2em;
-    color: white;
+    font-size: 1.5em;
+    color: black;
     position: absolute;
     font-family: 'clan', helvetica, sans-serif;
-    background-color: white !important;
-    color: black;
-    padding: 5px 10px;
+    color: white;
+    padding: 5px 20px;
     z-index: 9999999999999; }
-  .image-wrapper .panoram {
-    height: 100%;
-    width: auto;
+  .image-wrapper .threed {
+    z-index: 99999999999;
+    width: 2000px;
+    height: 1500px;
     position: absolute;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -ms-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    -webkit-transition: all 0.2 linear;
-    -moz-transition: all 0.2 linear;
-    -ms-transition: all 0.2 linear;
-    -o-transition: all 0.2 linear;
-    transition: all 0.2 linear; }
+    top: 0;
+    left: 0;
+    background-color: transparent; }
+    .image-wrapper .threed.no-gl {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      margin-top: 5%;
+      z-index: 9; }
 
 .info {
   width: 80%;
@@ -333,6 +336,8 @@ header {
   height: 100%;
   padding-top: 3.5%;
   background-color: black !important; }
+  .video-wrapper.dontshow {
+    left: -99999px; }
   @media (max-width: 1024px) {
     .video-wrapper {
       display: none; } }
@@ -398,8 +403,8 @@ header {
     height: 80%;
     width: 100%;
     overflow: hidden;
-    background: url("../img/panorama-crop.jpg") no-repeat center center;
-    background-size: cover; }
+    background: url("../img/quotes.png") no-repeat center center;
+    background-size: contain; }
   .mobile .logo {
     position: absolute;
     background-color: black;
@@ -414,11 +419,12 @@ header {
     background-color: black;
     color: white;
     opacity: 1;
-    top: 80%;
+    top: 70%;
     width: 100%; }
     .mobile .mobile-body h2 {
       padding: 0 5%;
-      text-align: center; }
+      text-align: center;
+      font-size: 1em; }
     .mobile .mobile-body ul {
       text-align: center;
       padding: 0; }

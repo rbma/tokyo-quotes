@@ -1036,6 +1036,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/img\/grad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6043,
+		"inputAbbreviatedPath": "\/img\/grad.png",
+		"outputAbbreviatedPath": "\/img\/grad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1043,39 +1054,6 @@
 		"initialSize": 10113,
 		"inputAbbreviatedPath": "\/img\/logo.png",
 		"outputAbbreviatedPath": "\/img\/logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/panorama-crop.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 276194,
-		"inputAbbreviatedPath": "\/img\/panorama-crop.jpg",
-		"outputAbbreviatedPath": "\/img\/panorama-crop.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/panorama-large-tweaked.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.07371e+06,
-		"inputAbbreviatedPath": "\/img\/panorama-large-tweaked.jpg",
-		"outputAbbreviatedPath": "\/img\/panorama-large-tweaked.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/panorama-web.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 920159,
-		"inputAbbreviatedPath": "\/img\/panorama-web.jpg",
-		"outputAbbreviatedPath": "\/img\/panorama-web.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1095,20 +1073,9 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 182460,
+		"initialSize": 85109,
 		"inputAbbreviatedPath": "\/img\/quotes.png",
 		"outputAbbreviatedPath": "\/img\/quotes.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/rbma-social.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 279085,
-		"inputAbbreviatedPath": "\/img\/rbma-social.jpg",
-		"outputAbbreviatedPath": "\/img\/rbma-social.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
