@@ -13,14 +13,13 @@ module.exports = (grunt) ->
 				#files to concatenate
 				src: [
 					"bower_components/angular/angular.min.js"
-					"bower_components/angular-route/angular-route.js"
+					"bower_components/angular-route/angular-route.min.js"
 					"bower_components/angular-sanitize/angular-sanitize.min.js"
-					"bower_components/angular-scroll/angular-scroll.min.js"
 					"bower_components/angular-animate/angular-animate.min.js"
 					"bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js"
 					"bower_components/contentful/dist/contentful.min.js"
 					"bower_components/ng-contentful/ng-contentful.js"
-					"bower_components/showdown/src/showdown.js"
+					"bower_components/showdown/compressed/showdown.js"
 					"bower_components/three.js/three.min.js"
 					"js/object-loader.js"
 					"js/spin.js"

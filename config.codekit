@@ -24,6 +24,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/angular-animate\/min\/angular-animate.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular-animate\/min\/angular-animate.min-min.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular-animate\/min\/min\/angular-animate.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/angular-animate\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -58,6 +69,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/angular-route\/min\/angular-route.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular-route\/min\/angular-route.min-min.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular-route\/min\/min\/angular-route.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/angular-route\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -87,6 +109,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/angular-sanitize\/angular-sanitize.min.js",
 		"outputAbbreviatedPath": "\/bower_components\/angular-sanitize\/min\/angular-sanitize.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/angular-sanitize\/min\/angular-sanitize.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular-sanitize\/min\/angular-sanitize.min-min.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular-sanitize\/min\/min\/angular-sanitize.min-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -319,6 +352,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/angular\/min\/angular.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular\/min\/angular.min-min.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular\/min\/min\/angular.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/angular\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -514,6 +558,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/showdown\/compressed\/extensions\/twitter.js",
 		"outputAbbreviatedPath": "\/bower_components\/showdown\/compressed\/extensions\/min\/twitter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/showdown\/compressed\/min\/showdown-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/showdown\/compressed\/min\/showdown-min.js",
+		"outputAbbreviatedPath": "\/bower_components\/showdown\/compressed\/min\/min\/showdown-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -928,6 +983,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dist\/img\/grad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2999,
+		"inputAbbreviatedPath": "\/dist\/img\/grad.png",
+		"outputAbbreviatedPath": "\/dist\/img\/grad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -939,24 +1005,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/dist\/img\/panorama-crop.jpg": {
+	"\/dist\/img\/pattern_poster.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 294965,
-		"inputAbbreviatedPath": "\/dist\/img\/panorama-crop.jpg",
-		"outputAbbreviatedPath": "\/dist\/img\/panorama-crop.jpg",
+		"initialSize": 161248,
+		"inputAbbreviatedPath": "\/dist\/img\/pattern_poster.jpg",
+		"outputAbbreviatedPath": "\/dist\/img\/pattern_poster.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/dist\/img\/panorama-web.jpg": {
-		"fileType": 16384,
+	"\/dist\/img\/quotes.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 920159,
-		"inputAbbreviatedPath": "\/dist\/img\/panorama-web.jpg",
-		"outputAbbreviatedPath": "\/dist\/img\/panorama-web.jpg",
+		"initialSize": 226230,
+		"inputAbbreviatedPath": "\/dist\/img\/quotes.png",
+		"outputAbbreviatedPath": "\/dist\/img\/quotes.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -987,6 +1053,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dist\/js\/app.min.js",
 		"outputAbbreviatedPath": "\/dist\/js\/min\/app.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/dist\/js\/min\/app.concat-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/js\/min\/app.concat-min.js",
+		"outputAbbreviatedPath": "\/dist\/js\/min\/min\/app.concat-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/dist\/js\/min\/app.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/js\/min\/app.min-min.js",
+		"outputAbbreviatedPath": "\/dist\/js\/min\/min\/app.min-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1079,6 +1167,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/index.jade": {
 		"compileDebug": 1,

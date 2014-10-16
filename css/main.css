@@ -283,6 +283,9 @@ header {
       height: 100%;
       margin-top: 5%;
       z-index: 9; }
+      .image-wrapper .threed.no-gl img {
+        max-width: 50%;
+        margin-top: 10%; }
 
 .info {
   width: 80%;
