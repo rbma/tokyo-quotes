@@ -983,6 +983,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dist\/img\/color2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2134,
+		"inputAbbreviatedPath": "\/dist\/img\/color2.png",
+		"outputAbbreviatedPath": "\/dist\/img\/color2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/img\/grad.png": {
 		"fileType": 32768,
 		"ignore": 0,
