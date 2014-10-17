@@ -5,21 +5,7 @@
 	width: 80%;
 	height: 100%;
 	overflow: hidden;
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #E1267D),
-		color-stop(0.51, #F4E96D),
-		color-stop(1, #0F9FD4)
-	);
-	background-image: -o-linear-gradient(top, #E1267D 0%, #F4E96D 51%, #0F9FD4 100%);
-	background-image: -moz-linear-gradient(top, #E1267D 0%, #F4E96D 51%, #0F9FD4 100%);
-	background-image: -webkit-linear-gradient(top, #E1267D 0%, #F4E96D 51%, #0F9FD4 100%);
-	background-image: -ms-linear-gradient(top, #E1267D 0%, #F4E96D 51%, #0F9FD4 100%);
-	background-image: linear-gradient(to top, #E1267D 0%, #F4E96D 51%, #0F9FD4 100%);
-	z-index: 1;
+background-color: white;
 	background-repeat: no-repeat;
 	background-position: center center;
 	@include vendorize(background-size, cover !important);
@@ -38,7 +24,7 @@
 		text-transform: none;
 		font-size: 1.5em;
 		// background-color: black;
-		color: white;
+		color: black;
 		font-weight: bold;
 		position: absolute;
 		font-family: 'clan', helvetica, sans-serif;

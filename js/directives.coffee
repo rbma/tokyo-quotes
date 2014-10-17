@@ -242,7 +242,7 @@ quoteDirectives.directive('scene', ['$window', ($window) ->
 
 
 
-				texture = THREE.ImageUtils.loadTexture( "img/grad.png" );
+				texture = THREE.ImageUtils.loadTexture( "img/color2.png" );
 				texture.needsUpdate = true
 
 

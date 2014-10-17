@@ -160,7 +160,7 @@
                 r.onProgress = function(n, e, i) {
                     return console.log(n, e, i);
                 };
-                a = THREE.ImageUtils.loadTexture("img/grad.png");
+                a = THREE.ImageUtils.loadTexture("img/color2.png");
                 a.needsUpdate = true;
                 t = new THREE.OBJLoader(r);
                 t.load("obj/quotes.obj", function(n) {
