@@ -261,15 +261,14 @@ header {
     font-weight: bold;
     position: absolute;
     font-family: 'clan', helvetica, sans-serif;
-    padding: 5px 20px;
-    z-index: 9999999999999; }
+    padding: 5px 20px; }
   .image-wrapper .threed {
-    z-index: 99999999999;
     width: 2000px;
     height: 1500px;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
     background-color: transparent; }
     .image-wrapper .threed.no-gl {
       text-align: center;
