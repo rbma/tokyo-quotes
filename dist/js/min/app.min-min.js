@@ -19049,7 +19049,7 @@ THREE.LensFlare = function(e, t, n, r, i) {
                 t = new THREE.AmbientLight(16777215), h.add(t), i = new THREE.DirectionalLight(16772829), 
                 i.position.set(100, -20, 1), h.add(i), a = new THREE.LoadingManager(), a.onProgress = function(e, t, n) {
                     return console.log(e, t, n);
-                }, l = THREE.ImageUtils.loadTexture("img/grad.png"), l.needsUpdate = !0, o = new THREE.OBJLoader(a), 
+                }, l = THREE.ImageUtils.loadTexture("img/color2.png"), l.needsUpdate = !0, o = new THREE.OBJLoader(a), 
                 o.load("obj/quotes.obj", function(e) {
                     return e.traverse(function(e) {
                         return e instanceof THREE.Mesh ? e.material.map = l : void 0;
