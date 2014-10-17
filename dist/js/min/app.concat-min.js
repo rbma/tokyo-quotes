@@ -24624,7 +24624,7 @@ THREE.OBJLoader.prototype = {
                 i.onProgress = function(e, t, n) {
                     return console.log(e, t, n);
                 };
-                s = THREE.ImageUtils.loadTexture("img/grad.png");
+                s = THREE.ImageUtils.loadTexture("img/color2.png");
                 s.needsUpdate = true;
                 r = new THREE.OBJLoader(i);
                 r.load("obj/quotes.obj", function(e) {
